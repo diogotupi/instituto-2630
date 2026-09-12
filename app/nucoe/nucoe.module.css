@@ -4,10 +4,21 @@
   --nucoe-dark-red: #5e1818;
   --nucoe-grey: #cec6c6;
   --nucoe-light: #f5f1f0;
+  --red: var(--nucoe-red);
+  --near-black: var(--nucoe-dark);
+  --dark-red: var(--nucoe-dark-red);
+  --off-white: var(--nucoe-light);
+  --font-primary: var(--font-manrope, "Avenir Next", Arial, sans-serif);
+  --font-body: var(--font-primary);
+  --font-highlight: "rift", "Arial Narrow", sans-serif;
+  --font-display: "rift", "Arial Narrow", sans-serif;
+  --header-h: 72px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --glow: 0 0 40px color-mix(in srgb, var(--red) 35%, transparent);
   min-height: 100vh;
   background: var(--nucoe-dark);
   color: var(--nucoe-light);
-  font-family: "omnium-wide", "Avenir Next", Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.55;
   overflow: hidden;
 }

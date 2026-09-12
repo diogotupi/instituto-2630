@@ -162,7 +162,7 @@ export default function Home() {
         <div className="leader-quote motion"><span className="quote-mark">“</span><h2>A verdadeira liderança começa pela <em>compreensão de si mesmo.</em></h2><p>— Instituto 2630</p></div>
       </section>
 
-      <footer id="contato"><div className="footer-top motion"><p className="eyebrow red">Pronto para o próximo nível?</p><h2>Vamos <em>conversar.</em></h2><a className="button-primary" href="mailto:contato@instituto2630.com.br">Entre em contato <ArrowUpRight size={17} /></a></div><div className="footer-bottom"><a href="#home" className="brand" aria-label="Instituto 2630" /><span>© 2026 Instituto 2630</span><span>Desenvolvimento humano & empresarial</span></div></footer>
+      <footer id="contato" className="home-footer"><div className="footer-top motion"><p className="eyebrow red">Pronto para o próximo nível?</p><h2>Vamos <em>conversar.</em></h2><a className="button-primary" href="mailto:contato@instituto2630.com.br">Entre em contato <ArrowUpRight size={17} /></a></div><div className="footer-bottom"><a href="#home" className="brand" aria-label="Instituto 2630" /><span>© 2026 Instituto 2630</span><span>Desenvolvimento humano & empresarial</span></div></footer>
     </main>
   );
 }
