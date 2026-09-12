@@ -120,7 +120,7 @@
 .heroHeadline {
   max-width: 12ch;
   margin-bottom: 0.85rem;
-  font-size: clamp(3.1rem, 8vw, 5.2rem);
+  font-size: clamp(3.35rem, 8.6vw, 5.6rem);
   line-height: 0.9;
   letter-spacing: -0.015em;
   text-wrap: pretty;
@@ -140,18 +140,23 @@
   color: var(--red);
 }
 
-.heroHeadline :global(*) {
+.heroHeadlineWhite,
+.heroHeadlineAccent {
   animation: heroLineIn 0.8s var(--ease-out) both;
 }
 
 .heroHeadlineAccent {
-  animation-delay: 100ms !important;
+  animation-delay: 140ms;
+}
+
+.heroHeadlineWhite:last-child {
+  animation-delay: 280ms;
 }
 
 @keyframes heroLineIn {
   from {
     opacity: 0;
-    transform: translateY(0.35em);
+    transform: translateX(-0.55em);
   }
   to {
     opacity: 1;
@@ -256,7 +261,7 @@
 
   .heroHeadline {
     max-width: 13ch;
-    font-size: clamp(3.6rem, 5vw, 5.1rem);
+    font-size: clamp(4.15rem, 5.6vw, 5.8rem);
   }
 
   .heroCopy {
@@ -305,7 +310,8 @@
 }
 
 .withPhoto :global(.section__inner) {
-  z-index: 2;
+  position: relative;
+  z-index: 4;
 }
 
 .withPhoto::after {
@@ -318,14 +324,14 @@
 
 :global(.section--light).withPhoto::after {
   background:
-    linear-gradient(90deg, rgb(245 241 240 / 94%) 8%, rgb(245 241 240 / 62%) 58%, rgb(245 241 240 / 18%)),
-    linear-gradient(rgb(245 241 240 / 34%), rgb(245 241 240 / 54%));
+    linear-gradient(90deg, rgb(245 241 240 / 97%) 5%, rgb(245 241 240 / 88%) 46%, rgb(245 241 240 / 20%) 82%),
+    linear-gradient(rgb(245 241 240 / 15%), rgb(245 241 240 / 30%));
 }
 
 :global(.section--dark).withPhoto::after {
   background:
-    linear-gradient(90deg, rgb(35 30 30 / 74%) 6%, rgb(35 30 30 / 46%) 60%, rgb(35 30 30 / 64%)),
-    linear-gradient(rgb(35 30 30 / 28%), rgb(35 30 30 / 58%));
+    linear-gradient(90deg, rgb(35 30 30 / 96%) 4%, rgb(35 30 30 / 82%) 48%, rgb(35 30 30 / 40%) 82%),
+    linear-gradient(rgb(35 30 30 / 14%), rgb(35 30 30 / 34%));
 }
 
 .editorialImage {
@@ -336,18 +342,17 @@
 }
 
 .imageLight {
-  opacity: 0.58;
-  mix-blend-mode: multiply;
+  opacity: 0.7;
 }
 
 .imageDark {
-  opacity: 0.68;
+  opacity: 0.76;
   object-position: 57% 45%;
   filter: grayscale(0.35) contrast(1.12) saturate(0.65);
 }
 
 .imageRight {
-  opacity: 0.55;
+  opacity: 0.66;
   object-position: 68% 46%;
   filter: grayscale(0.35) contrast(1.04) saturate(0.72);
 }
@@ -384,13 +389,13 @@
   background: color-mix(in srgb, var(--near-black) 4%, transparent);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
 }
 
 .methodStep strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.42rem;
   line-height: 1;
   letter-spacing: 0.02em;
 }
@@ -400,7 +405,7 @@
   max-width: 44rem;
   margin-top: 0.35rem;
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -561,7 +566,7 @@
   text-indent: 0.04em;
   text-transform: uppercase;
   color: var(--red);
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
 }
 
 .close .ctaRow {
