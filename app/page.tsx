@@ -3,7 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, ChevronDown, Menu, Pause, Play, Volume2, VolumeX, X } from 'lucide-react';
 
-const products = ['Pé Na Porta', 'School of Skull', 'OPESP', 'Instituto In Company', 'CEO-L'];
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const products = [
+  { label: 'Pé Na Porta', href: `${basePath}/penaporta` },
+  { label: 'School of Skull', href: `${basePath}/school-of-skull` },
+  { label: 'OPESP', href: `${basePath}/opesp` },
+  { label: 'Instituto In Company', href: `${basePath}/instituto-in-company` },
+  { label: 'CEO-L', href: `${basePath}/ceo-l` },
+];
 const coursePhotos = Array.from({ length: 20 }, (_, i) => `/course-${String(i + 1).padStart(2, '0')}.jpg`);
 
 function FilmSection() {
@@ -101,7 +108,7 @@ export default function Home() {
           <div className="product-menu">
             <button onClick={() => setProductsOpen(!productsOpen)}>NOSSOS PRODUTOS <ChevronDown size={16} /></button>
             <div className={`submenu ${productsOpen ? 'show' : ''}`}>
-              {products.map((product, i) => <a href="#produtos" key={product}><small>0{i + 1}</small>{product}<ArrowUpRight size={14} /></a>)}
+              {products.map((product, i) => <a href={product.href} key={product.label}><small>0{i + 1}</small>{product.label}<ArrowUpRight size={14} /></a>)}
             </div>
           </div>
           <a className="nav-cta" href="#contato">Fale conosco <ArrowUpRight size={15} /></a>
@@ -147,7 +154,7 @@ export default function Home() {
       <section id="produtos" className="products section-pad">
         <div className="section-index">02 <span>Nossos produtos</span></div>
         <div className="products-head motion"><p className="eyebrow red">Método Caveira</p><h2>Treinamentos<br /><em>sem limites.</em></h2><p className="body-copy">Programas desenhados para levar indivíduos e equipes ao seu limite de performance.</p></div>
-        <div className="product-list">{products.map((product, i) => <a href="#contato" className="product-row motion" key={product}><span className="product-no">0{i + 1}</span><h3>{product}</h3><ArrowUpRight size={20} /></a>)}</div>
+        <div className="product-list">{products.map((product, i) => <a href={product.href} className="product-row motion" key={product.label}><span className="product-no">0{i + 1}</span><h3>{product.label}</h3><ArrowUpRight size={20} /></a>)}</div>
       </section>
 
       <section id="lideranca" className="leadership section-pad">
