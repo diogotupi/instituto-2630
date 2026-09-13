@@ -33,7 +33,7 @@ export function LandingSections() {
         <div className={`section__inner ${styles.heroGrid}`}>
           <div className={styles.heroCopy}>
             <Reveal>
-              <p className="eyebrow">{nucoe.hero.eyebrow}</p>
+              <p className={`eyebrow ${styles.heroEyebrow}`}>{nucoe.hero.eyebrow}</p>
             </Reveal>
             <Reveal delayMs={100}>
               <h1 className={`headline ${styles.heroHeadline}`}>
@@ -56,15 +56,15 @@ export function LandingSections() {
               <div className={styles.heroMeta}>
                 <span className={styles.heroMetaItem}>
                   <strong>2 dias</strong>
-                  <small>formação ao vivo</small>
+                  <small>4 horas por dia</small>
                 </span>
                 <span className={styles.heroMetaItem}>
-                  <strong>Online + Zoom</strong>
-                  <small>ao vivo com a turma</small>
+                  <strong>Ao vivo via Zoom</strong>
+                  <small>com a turma</small>
                 </span>
                 <span className={styles.heroMetaItem}>
                   <strong>Vagas limitadas</strong>
-                  <small>turma ao vivo</small>
+                  <small>participação guiada</small>
                 </span>
               </div>
               <p className={`micro ${styles.heroMicro}`}>{micro}</p>

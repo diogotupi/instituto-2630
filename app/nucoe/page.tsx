@@ -9,7 +9,7 @@ import styles from "./nucoe.module.css";
 
 export const metadata = {
   title: "NUCOE | Instituto 2630",
-  description: "Formação ao vivo do Instituto 2630 para construir cultura, liderança e propósito.",
+  description: "Formação ao vivo via Zoom do Instituto 2630 para construir cultura, liderança e propósito.",
 };
 
 export default function NucoePage() {

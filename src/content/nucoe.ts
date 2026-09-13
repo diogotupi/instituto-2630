@@ -19,7 +19,7 @@ export const nucoe = {
 
   event: {
     formatLabel: "2 dias • 4 horas por dia • 8 horas totais",
-    platform: "Online e ao vivo via Zoom",
+    platform: "Ao vivo via Zoom",
     dateLabel: "[DATA A CONFIRMAR]",
     timeLabel: "[HORÁRIO A CONFIRMAR]",
     locationLabel: "[LOCAL A CONFIRMAR]",
@@ -35,7 +35,7 @@ export const nucoe = {
   },
 
   hero: {
-    eyebrow: "CULTURA DE ELITE | FORMAÇÃO AO VIVO",
+    eyebrow: "CONSTRUA A CULTURA DE ELITE",
     headline: "Sem cultura, você se torna funcionário do seu colaborador.",
     subheadline:
       "Aprenda a construir a essência da cultura da sua empresa para criar uma referência comum capaz de orientar líderes, decisões e comportamentos.",
@@ -165,7 +165,7 @@ export const nucoe = {
   offer: {
     headline: "Uma essência clara cria uma referência comum para a empresa.",
     includes: [
-      "2 dias ao vivo pelo Zoom",
+      "2 dias ao vivo via Zoom",
       "4 horas por dia, 8 horas totais",
       "Aplicação prática guiada pelo Instituto 2630",
       "Estrutura da essência: Propósito, Valores e Princípios",
@@ -201,7 +201,7 @@ export const nucoe = {
     },
     {
       question: "Como funciona?",
-      answer: "Ao vivo pelo Zoom, em dois dias, com quatro horas de formação por dia.",
+      answer: "Ao vivo via Zoom, em dois dias, com quatro horas de formação por dia.",
     },
     {
       question: "O que será construído?",
