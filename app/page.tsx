@@ -51,7 +51,7 @@ function FilmSection() {
 
   return (
     <section className="film-section motion" aria-label="Instituto 2630 em ação">
-      <div className="film-heading"><span>2630 · Em ação</span><h2>Não explicamos o limite. <em>Vivemos.</em></h2></div>
+      <div className="film-heading"><span>2630 · Em ação</span><h2>Não explicamos a liderança, <em>fazemos você vivê-la</em></h2></div>
       <div className={`film-frame ${playing ? 'is-playing' : ''}`}>
         <video ref={videoRef} poster="/video-poster.jpg" playsInline preload="metadata" onLoadedMetadata={event => { event.currentTarget.muted = false; event.currentTarget.volume = volume; }} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onTimeUpdate={event => { const video = event.currentTarget; setProgress(video.duration ? (video.currentTime / video.duration) * 100 : 0); }} onEnded={() => setPlaying(false)}>
           <source src="https://res.cloudinary.com/dc48hzb6b/video/upload/v1789065908/videoplayback_fede9h.mp4" type="video/mp4" />
