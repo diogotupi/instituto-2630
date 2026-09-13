@@ -11,6 +11,20 @@ const products = [
   { label: 'Instituto In Company', href: `${basePath}/instituto-in-company` },
   { label: 'CEO-L', href: `${basePath}/ceo-l` },
 ];
+const clientLogos = [
+  { name: 'MyBirds', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/5mybirds.webp' },
+  { name: 'Blue3', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/4blue3.webp' },
+  { name: 'Inter', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/3inter.webp' },
+  { name: 'Gamma', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/2gamma.webp' },
+  { name: 'Autobem', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/1autobem.webp' },
+  { name: 'Petrobras', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/12petrobras.webp' },
+  { name: 'Carraro', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/11carraro.webp' },
+  { name: 'Porto Seguro', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/10porto-seguro.webp' },
+  { name: 'Idex', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/9idex.webp' },
+  { name: 'Nova Opção', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/8nova-opcao.webp' },
+  { name: 'Petromar', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/7petromar.webp' },
+  { name: 'Flashnet', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/6flashnet.webp' },
+];
 const coursePhotos = Array.from({ length: 20 }, (_, i) => `/course-${String(i + 1).padStart(2, '0')}.jpg`);
 
 function FilmSection() {
@@ -120,6 +134,22 @@ export default function Home() {
         <div className="hero-copy motion"><p className="eyebrow"><span /> Centro de excelência em treinamento humano</p><h1 className="hero-title">Não importa o problema,<br /><em>liderar é a solução</em></h1><p className="hero-subtitle">Lidere-se</p><a href="#quem-somos" className="button-primary">Conheça o Instituto <ArrowDown size={17} /></a></div>
         <div className="hero-stamp"><strong>2630</strong><span>MENTE<br />CORPO<br />PROPÓSITO</span></div>
         <a className="scroll-cue" href="#quem-somos">Scroll para explorar <ArrowDown size={14} /></a>
+      </section>
+
+      <section className="trust-strip" aria-labelledby="trust-title">
+        <div className="trust-heading">
+          <span className="trust-kicker">Experiência aplicada</span>
+          <h2 id="trust-title">Quem confia<br /><em>no nosso trabalho.</em></h2>
+        </div>
+        <div className="trust-carousel" aria-label="Empresas que já trabalharam com o Instituto 2630">
+          <div className="trust-track">
+            {[...clientLogos, ...clientLogos].map((logo, i) => (
+              <div className="trust-logo" key={`${logo.name}-${i}`} aria-hidden={i >= clientLogos.length}>
+                <img src={logo.src} alt={i < clientLogos.length ? logo.name : ''} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section id="quem-somos" className="intro section-pad">
