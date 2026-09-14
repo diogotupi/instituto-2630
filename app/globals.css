@@ -61,7 +61,7 @@ em{font-style:normal;color:var(--red)}
 .intro:after{content:"";position:absolute;right:0;top:0;width:43%;height:100%;background:linear-gradient(90deg,#f5f1f0 0%,#f5f1f000 62%),url('/about-training.jpg') center/cover;opacity:.45;mix-blend-mode:multiply}
 .intro-content{position:relative;z-index:2;margin-left:18%;max-width:690px}
 .intro h2,.products h2{font-size:clamp(4rem,7vw,7.2rem);line-height:.82;letter-spacing:-.035em;margin:25px 0 34px}
-.body-copy{max-width:460px;color:#6d6666;line-height:1.7;font-size:16px}
+.body-copy{max-width:460px;color:#403a3a;line-height:1.7;font-size:16px}
 .text-link{display:inline-flex;align-items:center;gap:18px;margin-top:24px;padding-bottom:9px;border-bottom:1px solid var(--red);font:700 11px "termina";letter-spacing:.1em;text-transform:uppercase}
 .intro-number{position:absolute;right:8%;bottom:2%;font:700 20vw "rift";letter-spacing:-.08em;color:#dcd5d5}.intro-number sup{color:var(--red);font-size:.27em}
 
@@ -72,10 +72,10 @@ em{font-style:normal;color:var(--red)}
 .founders-heading>p:last-child{max-width:430px;color:#aaa4a4;line-height:1.7}
 .profile{position:relative;min-height:760px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:58% 42%;align-items:end}
 .profile+.profile{margin-top:140px}
-.profile-portrait{height:760px;position:relative;overflow:hidden;background:linear-gradient(145deg,#292323,#151212)}
+.profile-portrait{height:760px;position:relative;overflow:hidden;background:#111}
 .profile-portrait:after{content:"";position:absolute;inset:auto 0 0;height:34%;background:linear-gradient(transparent,#111)}
-.profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;filter:saturate(.65) contrast(1.08);transform:translate3d(var(--mx),var(--my),0) scale(1.035);transition:filter .5s}
-.profile:hover .profile-portrait img{filter:saturate(1) contrast(1.04)}
+.profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;mix-blend-mode:multiply;filter:grayscale(.25) saturate(.55) contrast(1.12) brightness(.9);transform:translate3d(var(--mx),var(--my),0) scale(1.035);transition:filter .5s}
+.profile:hover .profile-portrait img{filter:grayscale(0) saturate(.85) contrast(1.08) brightness(.92)}
 .profile-info{position:relative;z-index:3;margin:0 0 64px -70px;padding:48px 0 35px 58px;background:linear-gradient(90deg,#171313ee 0%,#171313 65%,transparent);border-left:2px solid var(--red)}
 .profile-info span{font:700 11px "termina";letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .profile-info h3{font-size:clamp(5rem,9vw,9rem);line-height:.72;letter-spacing:-.035em;margin:20px 0 32px}
