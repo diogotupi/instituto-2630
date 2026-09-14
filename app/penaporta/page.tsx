@@ -9,7 +9,7 @@ import styles from "./penaporta.module.css";
 
 export const metadata = {
   title: "Pé Na Porta | Instituto 2630",
-  description: "Uma experiência presencial para transformar desejo em meta, estratégia e ação.",
+  description: "Um dia de treinamento presencial para transformar objetivos em planejamento, prioridades e ações executáveis.",
 };
 
 export default function PenaPortaPage() {
