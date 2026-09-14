@@ -165,7 +165,7 @@ export function PenaPortaSections() {
             <p>O objetivo não é reproduzir o ambiente militar dentro das empresas, mas aplicar princípios de preparação, responsabilidade, unidade, treinamento e execução onde resultados dependem de pessoas.</p>
           </Reveal>
           <div className={styles.founders}>
-            <Reveal className={styles.founderCard}><div className={styles.founderImage}><Image src={assetPath("/freitas-full.png")} alt="Freitas, co-fundador do Instituto 2630" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>26</span><strong>Freitas</strong></Reveal>
+          <Reveal className={styles.founderCard}><div className={styles.founderImage}><Image src={assetPath("/freitas-cutout.png")} alt="Freitas, co-fundador do Instituto 2630" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>26</span><strong>Freitas</strong></Reveal>
             <Reveal delayMs={90} className={styles.founderCard}><div className={`${styles.founderImage} ${styles.wallaceImage}`}><Image src={assetPath("/wallace.png")} alt="Wallace, co-fundador do Instituto 2630" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>30</span><strong>Wallace</strong></Reveal>
           </div>
         </div>
