@@ -73,9 +73,8 @@ em{font-style:normal;color:var(--red)}
 .profile{position:relative;min-height:760px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:58% 42%;align-items:end}
 .profile+.profile{margin-top:140px}
 .profile-portrait{height:760px;position:relative;overflow:hidden;background:#111}
-.profile-portrait:after{content:"";position:absolute;inset:auto 0 0;height:34%;background:linear-gradient(transparent,#111)}
-.profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;mix-blend-mode:multiply;filter:grayscale(.25) saturate(.55) contrast(1.12) brightness(.9);transform:translate3d(var(--mx),var(--my),0) scale(1.035);transition:filter .5s}
-.profile:hover .profile-portrait img{filter:grayscale(0) saturate(.85) contrast(1.08) brightness(.92)}
+.profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;mix-blend-mode:normal;filter:none;transform:translate3d(var(--mx),var(--my),0) scale(1.035);transition:transform .5s}
+.profile:hover .profile-portrait img{filter:none}
 .profile-info{position:relative;z-index:3;margin:0 0 64px -70px;padding:48px 0 35px 58px;background:linear-gradient(90deg,#171313ee 0%,#171313 65%,transparent);border-left:2px solid var(--red)}
 .profile-info span{font:700 11px "termina";letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .profile-info h3{font-size:clamp(5rem,9vw,9rem);line-height:.72;letter-spacing:-.035em;margin:20px 0 32px}
