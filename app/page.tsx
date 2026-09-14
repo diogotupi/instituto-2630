@@ -26,6 +26,15 @@ const clientLogos = [
   { name: 'Flashnet', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/6flashnet.webp' },
 ];
 const coursePhotos = Array.from({ length: 20 }, (_, i) => `/course-${String(i + 1).padStart(2, '0')}.jpg`);
+const homeHighlights = [
+  { src: '/home-highlights/turma-auditorio.png', label: 'Aprendizado compartilhado' },
+  { src: '/home-highlights/freitas-fogueira.png', label: 'Liderança em contexto' },
+  { src: '/home-highlights/aula-campo.png', label: 'Método na prática' },
+  { src: '/home-highlights/equipe-caveira-01.png', label: 'Espírito de equipe' },
+  { src: '/home-highlights/turma-fundadores.png', label: 'Pessoas em movimento' },
+  { src: '/home-highlights/turma-intensivo.png', label: 'Intensidade e conexão' },
+  { src: '/home-highlights/equipe-magnus.png', label: 'Experiências que ficam' },
+];
 
 function FilmSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -149,6 +158,22 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="home-highlights" aria-labelledby="highlights-title">
+        <div className="highlights-heading motion">
+          <p className="eyebrow red">Experiências reais</p>
+          <h2 id="highlights-title">A liderança<br /><em>acontece na prática.</em></h2>
+          <p>Entre sala, campo e convivência, cada experiência deixa uma marca diferente.</p>
+        </div>
+        <div className="highlights-grid">
+          {homeHighlights.map((photo, i) => (
+            <figure className={`highlight-card highlight-card-${i + 1} motion`} key={photo.src}>
+              <img src={photo.src} alt={photo.label} loading={i < 3 ? 'eager' : 'lazy'} />
+              <figcaption><span>0{i + 1}</span>{photo.label}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
