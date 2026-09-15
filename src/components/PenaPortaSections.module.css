@@ -80,7 +80,7 @@
 .founders { display: grid; gap: 1rem; }
 .founderCard { position: relative; min-width: 0; }
 .founderImage { position: relative; height: 490px; overflow: hidden; background: #211c1c; }
-.founderImage img { object-fit: contain; object-position: center top; }
+.founderImage img { object-fit: contain; object-position: center top; mix-blend-mode: multiply; }
 .wallaceImage { padding-top: 1.5rem; background: #111; }
 .wallaceImage img { object-fit: contain; object-position: center top; }
 .founderCard > span { position: absolute; top: .5rem; left: .7rem; z-index: 2; color: var(--red); font-family: var(--font-display); font-size: 4.5rem; font-weight: 800; line-height: 1; }
