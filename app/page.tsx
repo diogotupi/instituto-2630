@@ -12,18 +12,18 @@ const products = [
   { label: 'CEO-L', href: `${basePath}/ceo-l` },
 ];
 const clientLogos = [
-  { name: 'MyBirds', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/5mybirds.webp' },
-  { name: 'Blue3', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/4blue3.webp' },
-  { name: 'Inter', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/3inter.webp' },
-  { name: 'Gamma', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/2gamma.webp' },
-  { name: 'Autobem', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/1autobem.webp' },
-  { name: 'Petrobras', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/12petrobras.webp' },
-  { name: 'Carraro', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/11carraro.webp' },
-  { name: 'Porto Seguro', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/10porto-seguro.webp' },
-  { name: 'Idex', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/9idex.webp' },
-  { name: 'Nova Opção', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/8nova-opcao.webp' },
-  { name: 'Petromar', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/7petromar.webp' },
-  { name: 'Flashnet', src: 'https://instituto2630.com.br/wp-content/uploads/2025/01/6flashnet.webp' },
+  { name: 'MyBirds', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/5mybirds.webp' },
+  { name: 'Blue3', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/4blue3.webp' },
+  { name: 'Inter', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/3inter.webp' },
+  { name: 'Gamma', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/2gamma.webp' },
+  { name: 'Autobem', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/1autobem.webp' },
+  { name: 'Petrobras', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/12petrobras.webp' },
+  { name: 'Carraro', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/11carraro.webp' },
+  { name: 'Porto Seguro', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/10porto-seguro.webp' },
+  { name: 'Idex', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/9idex.webp' },
+  { name: 'Nova Opção', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/8nova-opcao.webp' },
+  { name: 'Petromar', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/7petromar.webp' },
+  { name: 'Flashnet', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/6flashnet.webp' },
 ];
 const coursePhotos = Array.from({ length: 20 }, (_, i) => `/course-${String(i + 1).padStart(2, '0')}.jpg`);
 const homeHighlights = [
@@ -76,7 +76,7 @@ function FilmSection() {
     <section className="film-section motion" aria-label="Instituto 2630 em ação">
       <div className="film-heading"><span>2630 · Em ação</span><h2>Não explicamos a liderança, <em>fazemos você vivê-la</em></h2></div>
       <div className={`film-frame ${playing ? 'is-playing' : ''}`}>
-        <video ref={videoRef} poster="/video-poster.jpg" playsInline preload="metadata" onLoadedMetadata={event => { event.currentTarget.muted = false; event.currentTarget.volume = volume; }} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onTimeUpdate={event => { const video = event.currentTarget; setProgress(video.duration ? (video.currentTime / video.duration) * 100 : 0); }} onEnded={() => setPlaying(false)}>
+        <video ref={videoRef} poster="https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/video-poster.jpg" playsInline preload="metadata" onLoadedMetadata={event => { event.currentTarget.muted = false; event.currentTarget.volume = volume; }} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onTimeUpdate={event => { const video = event.currentTarget; setProgress(video.duration ? (video.currentTime / video.duration) * 100 : 0); }} onEnded={() => setPlaying(false)}>
           <source src="https://res.cloudinary.com/dc48hzb6b/video/upload/v1789065908/videoplayback_fede9h.mp4" type="video/mp4" />
         </video>
         <div className="film-shade" />
@@ -170,7 +170,7 @@ export default function Home() {
         <div className="highlights-grid">
           {homeHighlights.map((photo, i) => (
             <figure className={`highlight-card highlight-card-${i + 1} motion`} key={photo.src}>
-              <img src={photo.src} alt={photo.label} loading={i < 3 ? 'eager' : 'lazy'} />
+          <img src={`https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/${photo.src.split('/').pop()}`} alt={photo.label} loading={i < 3 ? 'eager' : 'lazy'} />
               <figcaption><span>0{i + 1}</span>{photo.label}</figcaption>
             </figure>
           ))}
@@ -187,13 +187,13 @@ export default function Home() {
         <header className="founders-heading motion"><p className="eyebrow red">À frente do Instituto</p><h2>Experiência<br />que <em>lidera.</em></h2><p>Dois veteranos das Operações Especiais. Uma metodologia construída na prática, aplicada à transformação de pessoas e empresas.</p></header>
         <article className="profile profile-freitas motion">
           <div className="profile-index">26</div>
-          <div className="profile-portrait"><img src="/freitas-full.png" alt="Freitas, fundador do Instituto 2630" /></div>
+          <div className="profile-portrait"><img src="https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/freitas-full.png" alt="Freitas, fundador do Instituto 2630" /></div>
           <div className="profile-info"><span>Co-fundador · Instrutor</span><h3>Freitas</h3><p>Veterano de operações especiais e especialista em liderança, estratégia e desenvolvimento de alta performance.</p><div className="profile-line" /></div>
           <div className="profile-name-vertical">FREITAS</div>
         </article>
         <article className="profile profile-wallace motion">
           <div className="profile-index">30</div>
-          <div className="profile-portrait"><img src="/wallace.png" alt="Wallace, fundador do Instituto 2630" /></div>
+          <div className="profile-portrait"><img src="https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/wallace.png" alt="Wallace, fundador do Instituto 2630" /></div>
           <div className="profile-info"><span>Co-fundador · Instrutor</span><h3>Wallace</h3><p>Com experiência de campo e formação de elite, transforma coragem, método e propósito em liderança real.</p><div className="profile-line" /></div>
           <div className="profile-name-vertical">WALLACE</div>
         </article>
@@ -203,7 +203,7 @@ export default function Home() {
 
       <section id="galeria" className="course-gallery">
         <div className="gallery-head motion"><p className="eyebrow red">Dentro do método</p><h2>O treino<br /><em>acontece.</em></h2><p>Experiências diferentes, um mesmo padrão de intensidade, disciplina e conexão.</p></div>
-        <div className="carousel-mask"><div className="carousel-track">{[...coursePhotos, ...coursePhotos].map((photo, i) => <figure key={i}><img src={photo} alt="Treinamento Instituto 2630" loading="lazy" /></figure>)}</div></div>
+        <div className="carousel-mask"><div className="carousel-track">{[...coursePhotos, ...coursePhotos].map((photo, i) => <figure key={i}><img src={`https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/${photo.split('/').pop()}`} alt="Treinamento Instituto 2630" loading="lazy" /></figure>)}</div></div>
       </section>
 
       <section id="produtos" className="products section-pad">

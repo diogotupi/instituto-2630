@@ -1,0 +1,578 @@
+.hero {
+  min-height: min(820px, 96svh);
+  display: grid;
+  align-items: end;
+  padding-top: calc(var(--header-h) + 3.5rem);
+  padding-bottom: 3rem;
+  text-align: left;
+  isolation: isolate;
+}
+
+/* Mobile: the photo is a top band; copy sits below it, never over the face. */
+.heroPhoto {
+  z-index: 0;
+  height: 62% !important;
+  bottom: auto !important;
+  /* Portrait source is narrower than the viewport, so widen the box past the
+     right edge to push Freitas right; the headline then lands on the wall. */
+  width: 132% !important;
+  max-width: none;
+  right: auto !important;
+  object-fit: cover;
+  object-position: 82% 0%;
+  opacity: 0.86;
+  /* Mask the photo itself so it dissolves before the copy, whatever its brightness. */
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 100%);
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(35 30 30 / 90%) 0%, rgb(35 30 30 / 54%) 43%, transparent 72%),
+    linear-gradient(180deg, rgb(35 30 30 / 78%) 0%, transparent 30%, rgb(35 30 30 / 36%) 100%);
+}
+
+@media (max-width: 859px) {
+  .hero {
+    align-items: end;
+  }
+
+  .heroPhoto {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+    object-position: 50% 18%;
+    opacity: 1;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .heroCopy {
+    width: min(100%, 34rem);
+    margin-top: 0;
+    padding: 2rem 1.25rem 3rem;
+    border: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none;
+    z-index: 3;
+    text-align: left;
+  }
+
+  .heroHeadline {
+    width: 100%;
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .heroGrid {
+    padding-top: 0;
+    align-items: end;
+    justify-items: center;
+  }
+
+  .heroShade {
+    background:
+      linear-gradient(180deg, rgb(35 30 30 / 24%) 0%, rgb(35 30 30 / 48%) 34%, rgb(35 30 30 / 92%) 100%),
+      linear-gradient(90deg, rgb(35 30 30 / 22%) 0%, transparent 50%, rgb(35 30 30 / 22%) 100%);
+  }
+
+  .hero :global(.ctaRow) {
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+
+  .heroCta {
+    margin-inline: 0;
+  }
+
+  .heroMeta {
+    text-align: center;
+  }
+
+  .heroMetaItem {
+    justify-items: center;
+  }
+
+  .heroMicro {
+    margin-inline: 0;
+    text-align: left;
+  }
+}
+
+.heroGrid {
+  z-index: 2;
+  display: grid;
+}
+
+.hero .heroEyebrow {
+  color: var(--off-white);
+}
+
+.heroCopy {
+  width: min(100%, 35rem);
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-left: 1px solid rgb(245 241 240 / 28%);
+  background: linear-gradient(90deg, rgb(35 30 30 / 38%), transparent);
+  backdrop-filter: blur(2px);
+}
+
+.heroHeadline {
+  max-width: 12ch;
+  margin-bottom: 0.85rem;
+  font-size: clamp(3.35rem, 8.6vw, 5.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+
+.heroHeadlineWhite,
+.heroHeadlineAccent {
+  display: block;
+}
+
+.heroHeadlineWhite {
+  font-weight: 500;
+}
+
+.heroHeadlineAccent {
+  margin-top: 0.18em;
+  color: var(--red);
+}
+
+.heroHeadlineWhite,
+.heroHeadlineAccent {
+  animation: heroLineIn 0.8s var(--ease-out) both;
+}
+
+.heroHeadlineAccent {
+  animation-delay: 140ms;
+}
+
+.heroHeadlineWhite:last-child {
+  animation-delay: 280ms;
+}
+
+@keyframes heroLineIn {
+  from {
+    opacity: 0;
+    transform: translateX(-0.55em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+:global(html.reduce-motion) .heroHeadlineWhite,
+:global(html.reduce-motion) .heroHeadlineAccent {
+  animation: none;
+}
+
+.heroLede {
+  max-width: 30rem;
+  text-wrap: pretty;
+}
+
+.heroLede strong {
+  color: var(--off-white);
+  font-weight: 700;
+}
+
+.hero .ctaRow {
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.heroCta {
+  min-height: 3.5rem;
+  padding-inline: 1.45rem;
+  font-size: 0.9rem;
+  box-shadow: 0 16px 34px rgb(204 0 30 / 24%);
+}
+
+.heroMeta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  max-width: 35rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(245 241 240 / 22%);
+}
+
+.heroMetaItem {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.heroMetaItem strong {
+  font-family: var(--font-display);
+  font-size: clamp(0.9rem, 1.7vw, 1.08rem);
+  line-height: 1;
+  color: var(--off-white);
+}
+
+.heroMetaItem small {
+  color: rgb(245 241 240 / 68%);
+  font-size: 0.68rem;
+  line-height: 1.3;
+}
+
+.heroMicro {
+  max-width: 35rem;
+  margin-top: 0.9rem;
+  line-height: 1.4;
+  color: rgb(245 241 240 / 64%);
+}
+
+@media (min-width: 860px) {
+  .hero {
+    min-height: clamp(650px, 76svh, 800px);
+    align-items: center;
+    padding-top: calc(var(--header-h) + 3.5rem);
+    padding-bottom: 3rem;
+  }
+
+  /* Desktop: photo fills the right half at full strength. */
+  .heroPhoto {
+    width: 46% !important;
+    height: 100% !important;
+    left: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    object-position: 64% 34%;
+    /* Dissolve the left edge of the photo into the copy column; face stays clean. */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  }
+
+  .heroShade {
+    background:
+      linear-gradient(0deg, rgb(35 30 30 / 62%) 0%, transparent 24%),
+      linear-gradient(90deg, rgb(35 30 30 / 92%) 0%, rgb(35 30 30 / 50%) 48%, transparent 78%),
+      linear-gradient(180deg, rgb(35 30 30 / 68%) 0%, transparent 24%);
+  }
+
+  .heroGrid {
+    grid-template-columns: 58% 42%;
+  }
+
+  .heroHeadline {
+    max-width: 13ch;
+    font-size: clamp(4.15rem, 5.6vw, 5.8rem);
+  }
+
+  .heroCopy {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .heroHeadline {
+    max-width: 11ch;
+    font-size: clamp(3rem, 13vw, 4.2rem);
+  }
+
+  .heroMeta {
+    gap: 0.5rem;
+  }
+
+  .heroMetaItem strong {
+    font-size: 0.84rem;
+  }
+
+  .heroMetaItem small {
+    font-size: 0.62rem;
+  }
+}
+
+.ctaRow {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.section--light .ctaRow,
+.tightTop .ctaRow {
+  justify-content: flex-start;
+}
+
+.tightTop {
+  padding-top: 0;
+}
+
+.withPhoto {
+  isolation: isolate;
+}
+
+.withPhoto :global(.section__inner) {
+  position: relative;
+  z-index: 4;
+}
+
+.withPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+:global(.section--light).withPhoto::after {
+  background:
+    linear-gradient(90deg, rgb(245 241 240 / 97%) 5%, rgb(245 241 240 / 88%) 46%, rgb(245 241 240 / 20%) 82%),
+    linear-gradient(rgb(245 241 240 / 15%), rgb(245 241 240 / 30%));
+}
+
+:global(.section--dark).withPhoto::after {
+  background:
+    linear-gradient(90deg, rgb(35 30 30 / 96%) 4%, rgb(35 30 30 / 82%) 48%, rgb(35 30 30 / 40%) 82%),
+    linear-gradient(rgb(35 30 30 / 14%), rgb(35 30 30 / 34%));
+}
+
+.editorialImage {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 66% 42%;
+  filter: grayscale(0.45) contrast(1.06) saturate(0.7);
+}
+
+.imageLight {
+  opacity: 0.7;
+}
+
+.imageDark {
+  opacity: 0.76;
+  object-position: 57% 45%;
+  filter: grayscale(0.35) contrast(1.12) saturate(0.65);
+}
+
+.imageRight {
+  opacity: 0.66;
+  object-position: 68% 46%;
+  filter: grayscale(0.35) contrast(1.04) saturate(0.72);
+}
+
+.subhead {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.against li::before {
+  background: var(--dark-red) !important;
+}
+
+.methodTrack {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+  counter-reset: none;
+}
+
+.methodStep {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--red);
+  background: color-mix(in srgb, var(--near-black) 4%, transparent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.methodStep strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.methodStep small {
+  display: block;
+  max-width: 44rem;
+  margin-top: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.methodIndex {
+  font-family: var(--font-highlight);
+  color: var(--red);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.guideGrid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .guideGrid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem;
+  }
+}
+
+.portrait {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgb(206 198 198 / 22%);
+  background: linear-gradient(180deg, transparent 68%, rgb(35 30 30 / 42%));
+}
+
+.portraitImage {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 42%;
+  filter: contrast(1.06) saturate(0.82);
+}
+
+.portraitPh {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-content: center;
+  gap: 0.35rem;
+  text-align: center;
+  border: 1px dashed color-mix(in srgb, var(--grey) 40%, transparent);
+  background:
+    linear-gradient(160deg, var(--dark-red), var(--near-black) 55%);
+  color: var(--grey);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.proofGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 800px) {
+  .proofGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.quote {
+  padding: 1.35rem 1.2rem;
+  background: color-mix(in srgb, #fff 55%, transparent);
+  border-top: 3px solid var(--red);
+}
+
+.quote p {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.quote footer {
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.quote footer span {
+  opacity: 0.7;
+}
+
+.offer {
+  isolation: isolate;
+}
+
+.offerList {
+  max-width: 40rem;
+}
+
+.offerList strong {
+  color: var(--off-white);
+}
+
+.bonus {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--grey) 22%, transparent);
+  max-width: 40rem;
+}
+
+.bonus h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.bonus p {
+  color: var(--grey);
+}
+
+.close {
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.closeStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.closeStack :global(.headline) {
+  margin-inline: auto;
+  max-width: none;
+  white-space: pre-line;
+}
+
+.closeLede {
+  margin-inline: auto;
+  max-width: none;
+  white-space: pre-line;
+}
+
+.mother {
+  margin: 1.5rem auto 0;
+  max-width: 28rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-indent: 0.04em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
+}
+
+.close .ctaRow {
+  justify-content: center;
+}
