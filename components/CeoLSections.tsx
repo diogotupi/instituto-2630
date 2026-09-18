@@ -10,8 +10,9 @@ const img = (name: string) => assetPath(`/course-${name}.jpg`);
 export function CeoLSections() {
   return <main className={styles.page}>
     <section className={`section section--dark ${styles.hero}`}>
-      <Image src={assetPath("/hero-training.jpg")} alt="Liderança em uma experiência do Instituto 2630" fill priority className={styles.heroImage} />
-      <div className={styles.shade} />
+      <Image src={assetPath("/ceo-l-hero.png")} alt="Freitas e Wallace no CEO-L" fill priority className={styles.heroImage} />
+    </section>
+    <section className={`section section--dark ${styles.heroCopy}`}>
       <div className="section__inner"><Reveal><p className="eyebrow">{ceol.hero.eyebrow}</p><h1 className="headline">{ceol.hero.headline}</h1><p className="lede">{ceol.hero.subheadline}</p><Link className="button-primary" href="#oferta">Quero viver o CEO-L <span>↗</span></Link><p className="micro">Liderança • Autoliderança • Equipe • Decisão • Planejamento • Pressão controlada</p></Reveal></div>
     </section>
     <section className="section section--light"><div className="section__inner"><Reveal><p className="eyebrow red">A pergunta que abre a consciência</p><h2 className="headline">Quem é você quando o controle desaparece?</h2><p className="lede">É fácil falar de liderança quando existe tempo, recurso, energia e previsibilidade. Mas você delega ou controla? Confia ou centraliza? Continua sendo o líder que acredita ser quando as condições deixam de ajudar?</p><p className={styles.statement}>A verdadeira liderança começa pela compreensão de si mesmo.</p></Reveal></div></section>
