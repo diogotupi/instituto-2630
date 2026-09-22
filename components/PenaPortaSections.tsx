@@ -13,6 +13,7 @@ const photos = {
   hero: "/pena-porta-hero-2026.png",
   preparation: "/pena-porta-preparacao.png",
   combat: "/pena-porta-mapa-combat.png",
+  day: "/pena-porta-execucao-hoje.png",
   workshop: [
     "/pena-porta-dinamica-aula.png",
     "/pena-porta-dinamica-mapa.png",
@@ -183,6 +184,9 @@ export function PenaPortaSections() {
               </Reveal>
             ))}
           </div>
+          <Reveal className={styles.dayVisual}>
+            <Image src={assetPath(photos.day)} alt="Participantes aplicando o planejamento em uma dinâmica do Pé na Porta" fill sizes="(max-width: 720px) 88vw, 80vw" />
+          </Reveal>
         </div>
       </section>
 
