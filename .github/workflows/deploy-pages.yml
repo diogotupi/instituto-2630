@@ -27,6 +27,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Place assets at the GitHub Pages root
+        run: |
+          mv dist/client/instituto-2630/_next dist/client/_next
+          rmdir dist/client/instituto-2630
       - name: Create clean URLs for GitHub Pages
         run: |
           for page in dist/client/*.html; do
@@ -37,9 +41,6 @@ jobs:
             mkdir -p "dist/client/$name"
             cp "$page" "dist/client/$name/index.html"
           done
-      - name: Fix asset paths for project Pages URL
-        run: |
-          find dist/client -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -exec perl -pi -e 's#(?<!/instituto-2630)/_next/#/instituto-2630/_next/#g' {} +
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client
