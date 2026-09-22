@@ -12,9 +12,11 @@ type Props = {
 };
 
 export function SiteHeader({ checkoutUrl, ctaLabel }: Props) {
+  const homeHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/`;
+
   return (
     <header className={styles.header}>
-      <a href="#hero" className={styles.brand} aria-label="Instituto 2630">
+      <a href={homeHref} className={styles.brand} aria-label="Ir para a home do Instituto 2630">
         <Image
           src={assetPath("/brand/logo-negativo-transparente.png")}
           alt="Instituto 26 30"
