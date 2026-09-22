@@ -1,6 +1,6 @@
 .hero { min-height: min(940px, 100svh); display: grid; align-items: end; padding-top: calc(var(--header-h) + 5rem) !important; isolation: isolate; }
-.heroImage { z-index: 0; object-fit: cover; object-position: center 57%; filter: grayscale(.62) contrast(1.08); animation: heroScale 13s ease-out both; }
-.heroShade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(35 30 30 / 98%) 0%, rgb(35 30 30 / 91%) 38%, rgb(35 30 30 / 22%) 78%), linear-gradient(0deg, rgb(35 30 30 / 82%), transparent 58%); }
+.heroImage { z-index: 0; object-fit: cover; object-position: center 57%; animation: heroScale 13s ease-out both; }
+.heroShade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(0 0 0 / 82%) 0%, rgb(0 0 0 / 68%) 38%, rgb(0 0 0 / 12%) 78%), linear-gradient(0deg, rgb(0 0 0 / 62%), transparent 58%); }
 .heroGridLines { position: absolute; inset: 0; z-index: 2; opacity: .16; background-image: linear-gradient(rgb(255 255 255 / 18%) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 18%) 1px, transparent 1px); background-size: 88px 88px; mask-image: linear-gradient(90deg, #000, transparent 80%); }
 .heroGrid { display: grid; align-items: end; min-height: 660px; }
 .heroCopy { width: min(100%, 46rem); padding: 1.5rem 0 0 clamp(0rem, 2vw, 1.6rem); border-left: 1px solid rgb(245 241 240 / 28%); }
@@ -163,7 +163,7 @@
 @media (max-width: 700px) {
   .hero { min-height: 900px; padding-bottom: 2.8rem !important; }
   .heroImage { object-position: center 47%; }
-  .heroShade { background: linear-gradient(180deg, rgb(35 30 30 / 28%) 0%, rgb(35 30 30 / 76%) 42%, rgb(35 30 30 / 99%) 73%); }
+  .heroShade { background: linear-gradient(180deg, rgb(0 0 0 / 22%) 0%, rgb(0 0 0 / 66%) 42%, rgb(0 0 0 / 94%) 73%); }
   .heroGrid { min-height: 740px; align-items: end; }
   .heroCopy { padding-left: 0; border-left: 0; }
   .heroTitle { font-size: clamp(4.1rem, 19vw, 5.7rem); }
