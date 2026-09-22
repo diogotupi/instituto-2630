@@ -27,6 +27,16 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Create clean URLs for GitHub Pages
+        run: |
+          for page in dist/client/*.html; do
+            name="$(basename "$page" .html)"
+            if [ "$name" = "index" ] || [ "$name" = "404" ]; then
+              continue
+            fi
+            mkdir -p "dist/client/$name"
+            cp "$page" "dist/client/$name/index.html"
+          done
       - name: Fix asset paths for project Pages URL
         run: |
           find dist/client -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -exec perl -pi -e 's#(?<!/instituto-2630)/_next/#/instituto-2630/_next/#g' {} +
