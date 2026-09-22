@@ -212,7 +212,7 @@ export function PenaPortaSections() {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <article key={`${testimonial.name}-${index}`} className={styles.testimonialCard} aria-hidden={index >= testimonials.length}>
                 <div className={styles.testimonialMedia}>
-                  <Image src={assetPath(testimonial.image)} alt={`Foto de ${testimonial.name}`} fill sizes="(max-width: 720px) 72vw, 30rem" />
+                  <Image src={assetPath(testimonial.image)} alt={`Foto de ${testimonial.name}`} fill sizes="(max-width: 720px) 72vw, 30rem" style={{ objectFit: "contain", objectPosition: "center bottom" }} />
                 </div>
                 <blockquote>“{testimonial.quote}”</blockquote>
                 <footer>
