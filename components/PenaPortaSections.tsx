@@ -147,6 +147,21 @@ export function PenaPortaSections() {
         </div>
       </section>
 
+      <section id="treinadores" className={`section section--dark ${styles.institute}`}>
+        <div className={`section__inner ${styles.instituteGrid}`}>
+          <Reveal className={styles.instituteCopy}>
+            <p className="eyebrow">Experiência que orienta</p>
+            <h2 className="headline headline--wide">Quem são seus treinadores.</h2>
+            <p className="lede">Freitas e Wallace unem experiência em operações especiais, liderança e aplicação prática para conduzir o Pé na Porta.</p>
+            <p>São fundadores do Instituto 2630 e traduzem preparação, responsabilidade, unidade, treinamento e execução para decisões reais de pessoas, times e empresas.</p>
+          </Reveal>
+          <div className={styles.founders}>
+            <Reveal className={styles.founderCard}><div className={styles.founderImage}><Image src={assetPath("/freitas-original.png")} alt="Freitas, treinador do Pé na Porta" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>26</span><strong>Freitas</strong></Reveal>
+            <Reveal delayMs={90} className={styles.founderCard}><div className={`${styles.founderImage} ${styles.wallaceImage}`}><Image src={assetPath("/wallace.png")} alt="Wallace, treinador do Pé na Porta" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>30</span><strong>Wallace</strong></Reveal>
+          </div>
+        </div>
+      </section>
+
       <section id="para-quem" className={`section section--light ${styles.audience}`}>
         <div className={`section__inner ${styles.audienceGrid}`}>
           <Reveal>
@@ -191,21 +206,6 @@ export function PenaPortaSections() {
       <section id="experiencia" className={`section section--light ${styles.proof}`}>
         <div className="section__inner">
           <Reveal><p className="eyebrow">Experiência real</p><h2 className="headline">Não é uma palestra. É treinamento.</h2><p className="lede">Participação ativa, reflexão, exercícios, tomada de decisão, interação e aplicação. O método ganha forma quando você entra em movimento.</p></Reveal>
-        </div>
-      </section>
-
-      <section id="instituto" className={`section section--dark ${styles.institute}`}>
-        <div className={`section__inner ${styles.instituteGrid}`}>
-          <Reveal className={styles.instituteCopy}>
-            <p className="eyebrow">Instituto 2630</p>
-            <h2 className="headline headline--wide">Liderança, mentalidade e cultura aplicadas à realidade.</h2>
-            <p className="lede">O Instituto 2630 nasceu da experiência de seus fundadores em operações especiais e da tradução desses aprendizados para liderança, autoliderança, cultura e performance organizacional.</p>
-            <p>O objetivo não é reproduzir o ambiente militar dentro das empresas, mas aplicar princípios de preparação, responsabilidade, unidade, treinamento e execução onde resultados dependem de pessoas.</p>
-          </Reveal>
-          <div className={styles.founders}>
-          <Reveal className={styles.founderCard}><div className={styles.founderImage}><Image src={assetPath("/freitas-original.png")} alt="Freitas, co-fundador do Instituto 2630" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>26</span><strong>Freitas</strong></Reveal>
-            <Reveal delayMs={90} className={styles.founderCard}><div className={`${styles.founderImage} ${styles.wallaceImage}`}><Image src={assetPath("/wallace.png")} alt="Wallace, co-fundador do Instituto 2630" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>30</span><strong>Wallace</strong></Reveal>
-          </div>
         </div>
       </section>
 
