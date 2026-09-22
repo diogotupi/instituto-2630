@@ -9,14 +9,18 @@ import { assetPath } from "@/lib/assetPath";
 import { penaporta, resolvePenaPortaCheckout } from "@/content/penaporta";
 import styles from "./PenaPortaSections.module.css";
 
-const proofPhotos = [
-  { src: "/course-03.jpg", alt: "Participantes em atividade prática do Instituto 2630" },
-  { src: "/course-08.jpg", alt: "Turma durante treinamento presencial" },
-  { src: "/course-12.jpg", alt: "Participante desenvolvendo uma atividade do treinamento" },
-  { src: "/course-17.jpg", alt: "Freitas conduzindo uma experiência presencial" },
-  { src: "/course-05.jpg", alt: "Interação entre participantes durante o curso" },
-  { src: "/course-19.jpg", alt: "Visão geral de uma turma do Instituto 2630" },
-];
+const photos = {
+  hero: "/pena-porta-hero-turma.png",
+  preparation: "/pena-porta-preparacao.png",
+  combat: "/pena-porta-mapa-combat.png",
+  workshop: [
+    "/pena-porta-dinamica-aula.png",
+    "/pena-porta-dinamica-mapa.png",
+    "/pena-porta-dinamica-equipe.png",
+  ],
+};
+
+const testimonialPlaceholders = ["Vídeo", "Foto", "Vídeo", "Foto"];
 
 export function PenaPortaSections() {
   const checkout = resolvePenaPortaCheckout(penaporta.checkoutUrl);
@@ -25,7 +29,7 @@ export function PenaPortaSections() {
   return (
     <>
       <section id="hero" className={`section section--dark ${styles.hero}`}>
-        <Image src={assetPath("/hero-training.jpg")} alt="Treinamento presencial do Instituto 2630" fill priority sizes="100vw" className={styles.heroImage} />
+        <Image src={assetPath(photos.hero)} alt="Turma do Pé na Porta reunida após o treinamento" fill priority sizes="100vw" className={styles.heroImage} />
         <div className={styles.heroShade} aria-hidden />
         <div className={styles.heroGridLines} aria-hidden />
         <div className={`section__inner ${styles.heroGrid}`}>
@@ -66,6 +70,8 @@ export function PenaPortaSections() {
       </section>
 
       <section className={`section section--dark ${styles.thesis}`}>
+        <Image src={assetPath(photos.preparation)} alt="Participante registrando aprendizados durante o treinamento" fill sizes="100vw" className={styles.thesisImage} />
+        <div className={styles.thesisShade} aria-hidden />
         <ChevronField density={10} />
         <div className="section__inner">
           <Reveal className={styles.thesisCopy}>
@@ -94,6 +100,23 @@ export function PenaPortaSections() {
         </div>
       </section>
 
+      <section className={`section section--dark ${styles.trainingMoment}`}>
+        <div className={`section__inner ${styles.trainingMomentGrid}`}>
+          <Reveal className={styles.trainingMomentCopy}>
+            <p className="eyebrow">Na prática</p>
+            <h2 className="headline">O método ganha forma quando o time entra em movimento.</h2>
+            <p className="lede">Análise, colaboração e decisão deixam de ser discurso para virar ação em conjunto.</p>
+          </Reveal>
+          <div className={styles.trainingMomentGallery}>
+            {photos.workshop.map((photo, index) => (
+              <Reveal key={photo} delayMs={index * 80} className={styles.trainingMomentPhoto}>
+                <Image src={assetPath(photo)} alt="Participantes aplicando o método Pé na Porta" fill sizes="(max-width: 850px) 88vw, 32vw" />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="metodo" className={`section section--dark ${styles.method}`}>
         <div className="section__inner">
           <Reveal>
@@ -114,6 +137,10 @@ export function PenaPortaSections() {
             <div className={styles.attributeRail}>
               {penaporta.methodFlow.map((item, index) => <span key={item}><b>{String(index + 1).padStart(2, "0")}</b>{item}</span>)}
             </div>
+            <div className={styles.combatVisual}>
+              <Image src={assetPath(photos.combat)} alt="Equipe utilizando o Mapa Combat em uma dinâmica" fill sizes="(max-width: 720px) 92vw, 37vw" />
+              <span>Mapa Combat em ação</span>
+            </div>
             <div className={styles.mapCore}><small>Ferramenta de aplicação</small><strong>Mapa<br />Combat</strong><span>Planejamento → decisão → execução</span></div>
           </Reveal>
           <div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.vacancy} /></div>
@@ -133,7 +160,7 @@ export function PenaPortaSections() {
 
       <section id="jornada" className={`section section--dark ${styles.day}`}>
         <div className="section__inner">
-          <Reveal><p className="eyebrow">O que acontece durante o dia</p><h2 className="headline">Preparar. Planejar. Executar.</h2></Reveal>
+          <Reveal><p className="eyebrow">O que acontece durante o dia</p><h2 className="headline">Identificar. Planejamento. Preparação. Execução hoje.</h2></Reveal>
           <div className={styles.timeline}>
             {penaporta.day.map((item, index) => (
               <Reveal as="article" key={item} delayMs={index * 65} className={styles.timelineItem}>
@@ -144,16 +171,26 @@ export function PenaPortaSections() {
         </div>
       </section>
 
+      <section id="depoimentos" className={`section section--light ${styles.testimonials}`}>
+        <div className="section__inner">
+          <Reveal><p className="eyebrow">Quem viveu, conta</p><h2 className="headline headline--wide">Depoimentos em breve.</h2><p className="lede">Este espaço receberá relatos, fotos e vídeos de quem passou pelo Pé na Porta.</p></Reveal>
+        </div>
+        <div className={styles.testimonialViewport} aria-label="Depoimentos do Pé na Porta em breve">
+          <div className={styles.testimonialTrack}>
+            {[...testimonialPlaceholders, ...testimonialPlaceholders].map((type, index) => (
+              <article key={`${type}-${index}`} className={styles.testimonialCard} aria-hidden={index >= testimonialPlaceholders.length}>
+                <div className={styles.testimonialMedia}><span>{type}</span>{type === "Vídeo" && <i aria-hidden>▶</i>}</div>
+                <p>Depoimento em breve</p>
+                <small>Espaço reservado para a experiência de um participante.</small>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="experiencia" className={`section section--light ${styles.proof}`}>
         <div className="section__inner">
           <Reveal><p className="eyebrow">Experiência real</p><h2 className="headline">Não é uma palestra. É treinamento.</h2><p className="lede">Participação ativa, reflexão, exercícios, tomada de decisão, interação e aplicação. O método ganha forma quando você entra em movimento.</p></Reveal>
-          <div className={styles.photoGrid}>
-            {proofPhotos.map((photo, index) => (
-              <Reveal key={photo.src} delayMs={(index % 3) * 70} className={styles.photoCard}>
-                <Image src={assetPath(photo.src)} alt={photo.alt} fill sizes="(max-width: 700px) 90vw, 33vw" />
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -199,7 +236,7 @@ export function PenaPortaSections() {
 
       <section id="fechamento" className={`section section--dark ${styles.close}`}>
         <ChevronField density={11} />
-        <div className="section__inner"><Reveal className={styles.closeCopy}><p className="eyebrow">O próximo movimento é seu</p><h2 className="headline headline--wide">O resultado que você quer amanhã exige planejamento hoje.</h2><p className="lede">Pare de depender apenas de intenção, esforço e improviso. Reserve um dia para organizar sua direção, aprender o método e construir um plano que possa ser executado.</p><blockquote>“Planeje bem e os resultados serão bons.”</blockquote><div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.vacancy} /></div></Reveal></div>
+        <div className="section__inner"><Reveal className={styles.closeCopy}><p className="eyebrow">O próximo movimento é seu</p><h2 className="headline headline--wide">O resultado que você quer exige: clareza, planejamento, preparação e execução hoje.</h2><p className="lede">Pare de depender apenas de intenção, esforço e improviso. Reserve um dia para organizar sua direção, aprender o método e construir um plano que possa ser executado.</p><blockquote>“Planeje bem e os resultados serão bons.”</blockquote><div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.vacancy} /></div></Reveal></div>
       </section>
     </>
   );

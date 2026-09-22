@@ -37,8 +37,8 @@ export const penaporta = {
   plan: [
     {
       code: "01",
-      title: "Entender",
-      body: "Reconhecer onde você está, o que impede o avanço e qual resultado precisa ser perseguido.",
+      title: "Definir",
+      body: "Definir com clareza onde você está, o que impede o avanço e qual resultado precisa ser perseguido.",
     },
     {
       code: "02",
@@ -74,12 +74,10 @@ export const penaporta = {
     "Treinamento militar",
   ],
   day: [
-    "Abertura e contexto",
-    "Leitura de cenário e objetivos",
-    "Aplicação dos 7 Atributos",
-    "Exercícios e provocações práticas",
-    "Construção e uso do Mapa Combat",
-    "Decisão, compromisso e fechamento",
+    "Identificar",
+    "Planejamento",
+    "Preparação",
+    "Execução hoje",
   ],
   faq: [
     {
