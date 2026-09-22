@@ -38,7 +38,7 @@ export function PenaPortaSections() {
             <Reveal><p className={`eyebrow ${styles.lightEyebrow}`}>Treinamento presencial | Instituto 2630</p></Reveal>
             <Reveal delayMs={80}><p className={styles.productName}>Pé na Porta</p></Reveal>
             <Reveal delayMs={130}>
-              <h1 className={styles.heroTitle}>Planeje bem <strong>e os resultados</strong> serão bons.</h1>
+              <h1 className={styles.heroTitle}><span>Planeje bem</span><strong>e os resultados</strong><span>serão bons.</span></h1>
             </Reveal>
             <Reveal delayMs={190}>
               <p className={styles.heroLede}>Um dia inteiro para transformar objetivos em planejamento, prioridades e ações executáveis — usando os 7 Atributos e o Mapa Combat.</p>
