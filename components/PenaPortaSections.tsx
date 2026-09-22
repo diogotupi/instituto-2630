@@ -21,7 +21,20 @@ const photos = {
   ],
 };
 
-const testimonialPlaceholders = ["Vídeo", "Foto", "Vídeo", "Foto"];
+const testimonials = [
+  {
+    name: "Karine Silva",
+    role: "Empresária",
+    image: "/testemunho-karine.png",
+    quote: "Romper ciclos e me libertar das cargas que limitavam o meu crescimento. Hoje vivo um novo começo.",
+  },
+  {
+    name: "Ryan",
+    role: "Empresário e engenheiro",
+    image: "/testemunho-ryan.png",
+    quote: "Uma mudança de mentalidade diante dos desafios e a capacidade de lidar com eles no caos, aprendendo a ter foco e paciência.",
+  },
+];
 
 export function PenaPortaSections() {
   const checkout = resolvePenaPortaCheckout(penaporta.checkoutUrl);
@@ -192,15 +205,20 @@ export function PenaPortaSections() {
 
       <section id="depoimentos" className={`section section--light ${styles.testimonials}`}>
         <div className="section__inner">
-          <Reveal><p className="eyebrow">Quem viveu, conta</p><h2 className="headline headline--wide">Depoimentos em breve.</h2><p className="lede">Este espaço receberá relatos, fotos e vídeos de quem passou pelo Pé na Porta.</p></Reveal>
+          <Reveal><p className="eyebrow">Quem viveu, conta</p><h2 className="headline headline--wide">Histórias que continuam depois do treinamento.</h2><p className="lede">Relatos reais de quem levou o método para a vida e para o trabalho.</p></Reveal>
         </div>
-        <div className={styles.testimonialViewport} aria-label="Depoimentos do Pé na Porta em breve">
+        <div className={styles.testimonialViewport} aria-label="Depoimentos de participantes do Pé na Porta">
           <div className={styles.testimonialTrack}>
-            {[...testimonialPlaceholders, ...testimonialPlaceholders].map((type, index) => (
-              <article key={`${type}-${index}`} className={styles.testimonialCard} aria-hidden={index >= testimonialPlaceholders.length}>
-                <div className={styles.testimonialMedia}><span>{type}</span>{type === "Vídeo" && <i aria-hidden>▶</i>}</div>
-                <p>Depoimento em breve</p>
-                <small>Espaço reservado para a experiência de um participante.</small>
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <article key={`${testimonial.name}-${index}`} className={styles.testimonialCard} aria-hidden={index >= testimonials.length}>
+                <div className={styles.testimonialMedia}>
+                  <Image src={assetPath(testimonial.image)} alt={`Foto de ${testimonial.name}`} fill sizes="(max-width: 720px) 72vw, 30rem" />
+                </div>
+                <blockquote>“{testimonial.quote}”</blockquote>
+                <footer>
+                  <strong>{testimonial.name}</strong>
+                  <span>{testimonial.role}</span>
+                </footer>
               </article>
             ))}
           </div>
