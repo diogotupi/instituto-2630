@@ -4,10 +4,13 @@ export type PenaPortaFaqItem = {
 };
 
 export const penaporta = {
-  checkoutUrl: "",
+  checkoutUrl: "https://www.sympla.com.br/evento/pe-na-porta/3573078?referrer=instituto2630.com.br&referrer=instituto2630.com.br",
+  whatsappUrl: "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0",
   ctas: {
-    primary: "Quero participar do Pé na Porta",
-    short: "Garantir minha vaga",
+    purchase: "Comprar agora",
+    vacancy: "Garantir minha vaga",
+    duo: "Garantir meu ingresso duplo",
+    whatsapp: "Falar com o Léo",
   },
   event: {
     format: "Treinamento presencial",

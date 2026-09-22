@@ -1,4 +1,5 @@
 import { CursorGlow } from "@/components/CursorGlow";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { MotionShell } from "@/components/MotionShell";
 import { PenaPortaSections } from "@/components/PenaPortaSections";
 import { ScrollProgress } from "@/components/ScrollProgress";
@@ -18,9 +19,10 @@ export default function PenaPortaPage() {
       <MotionShell>
         <ScrollProgress />
         <CursorGlow />
-        <SiteHeader checkoutUrl={penaporta.checkoutUrl} ctaLabel={penaporta.ctas.short} />
+        <SiteHeader checkoutUrl={penaporta.checkoutUrl} ctaLabel={penaporta.ctas.purchase} />
         <main><PenaPortaSections /></main>
-        <StickyCta checkoutUrl={penaporta.checkoutUrl} label={penaporta.ctas.short} />
+        <StickyCta checkoutUrl={penaporta.checkoutUrl} label={penaporta.ctas.purchase} />
+        <FloatingWhatsApp href={penaporta.whatsappUrl} />
       </MotionShell>
     </div>
   );
