@@ -21,6 +21,9 @@ const photos = {
   ],
 };
 
+// Keep the animated version available for a future edition.
+const showTestimonialCarousel = false;
+
 const testimonials = [
   {
     name: "Karine Silva",
@@ -206,8 +209,25 @@ export function PenaPortaSections() {
       <section id="depoimentos" className={`section section--light ${styles.testimonials}`}>
         <div className="section__inner">
           <Reveal><p className="eyebrow">Quem viveu, conta</p><h2 className="headline headline--wide">Histórias que continuam depois do treinamento.</h2><p className="lede">Relatos reais de quem levou o método para a vida e para o trabalho.</p></Reveal>
+          {!showTestimonialCarousel && (
+            <div className={styles.staticTestimonials}>
+              {testimonials.map((testimonial, index) => (
+                <article key={testimonial.name} className={styles.staticTestimonial}>
+                  <div className={styles.staticQuote}>
+                    <span className={styles.quoteMark} aria-hidden="true">“</span>
+                    <p className={styles.testimonialLabel}>Depoimento / 0{index + 1}</p>
+                    <blockquote>{testimonial.quote}</blockquote>
+                    <footer><strong>{testimonial.name}</strong><span>{testimonial.role}</span></footer>
+                  </div>
+                  <div className={`${styles.staticPortrait} ${index === 0 ? styles.karinePortrait : ""}`}>
+                    <Image src={assetPath(testimonial.image)} alt={`Foto de ${testimonial.name}`} fill sizes="(max-width: 720px) 88vw, 40vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
-        <div className={styles.testimonialViewport} aria-label="Depoimentos de participantes do Pé na Porta">
+        {showTestimonialCarousel && <div className={styles.testimonialViewport} aria-label="Depoimentos de participantes do Pé na Porta">
           <div className={styles.testimonialTrack}>
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <article key={`${testimonial.name}-${index}`} className={styles.testimonialCard} aria-hidden={index >= testimonials.length}>
@@ -222,7 +242,7 @@ export function PenaPortaSections() {
               </article>
             ))}
           </div>
-        </div>
+        </div>}
       </section>
 
       <section id="experiencia" className={`section section--light ${styles.proof}`}>
