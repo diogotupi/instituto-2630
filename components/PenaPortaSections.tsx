@@ -10,7 +10,7 @@ import { penaporta, resolvePenaPortaCheckout } from "@/content/penaporta";
 import styles from "./PenaPortaSections.module.css";
 
 const photos = {
-  hero: "/pena-porta-hero-turma.png",
+  hero: "/pena-porta-hero-2026.png",
   preparation: "/pena-porta-preparacao.png",
   combat: "/pena-porta-mapa-combat.png",
   workshop: [
@@ -29,7 +29,7 @@ export function PenaPortaSections() {
   return (
     <>
       <section id="hero" className={`section section--dark ${styles.hero}`}>
-        <Image src={assetPath(photos.hero)} alt="Turma do Pé na Porta reunida após o treinamento" fill priority sizes="100vw" className={styles.heroImage} />
+        <Image src={assetPath(photos.hero)} alt="Freitas, Wallace e participantes do Pé na Porta em treinamento" fill priority sizes="100vw" className={styles.heroImage} />
         <div className={styles.heroShade} aria-hidden />
         <div className={styles.heroGridLines} aria-hidden />
         <div className={`section__inner ${styles.heroGrid}`}>
