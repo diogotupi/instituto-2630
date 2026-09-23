@@ -132,9 +132,9 @@
 .instituteCopy > p:last-child { max-width: 43rem; margin-top: 1.4rem; color: var(--nucoe-grey); font-size: 1rem; line-height: 1.7; }
 .founders { display: grid; gap: 1rem; }
 .founderCard { position: relative; min-width: 0; }
-.founderImage { position: relative; height: 490px; overflow: hidden; background: #211c1c; }
+.founderImage { position: relative; height: 490px; overflow: hidden; background: transparent; }
 .founderImage img { object-fit: contain; object-position: center top; }
-.wallaceImage { padding-top: 1.5rem; background: #211c1c; }
+.wallaceImage { padding-top: 1.5rem; background: transparent; }
 .wallaceImage img { object-fit: contain; object-position: center top; }
 .founderCard > span { position: absolute; top: .5rem; left: .7rem; z-index: 2; color: var(--red); font-family: var(--font-display); font-size: 4.5rem; font-weight: 800; line-height: 1; }
 .founderCard > strong { display: block; margin-top: .8rem; font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; }
@@ -145,7 +145,6 @@
 @keyframes resumeFade { 0%, 31%, 100% { opacity: 0; transform: translateY(8px); } 5%, 26% { opacity: 1; transform: translateY(0); } }
 .journeyIntro { margin-top: 1.3rem; font-size: .9rem; color: var(--nucoe-grey); }
 .journeyTitle { max-width: 32ch; margin-top: .6rem; font-family: var(--font-display); font-size: clamp(1.9rem, 3.6vw, 3.5rem); line-height: 1.1; text-transform: uppercase; }
-@media (max-width: 719px) { .founderImage, .wallaceImage { background: transparent; } }
 @media (prefers-reduced-motion: reduce) { .resumeCarousel > span { animation: none; display: none; } .resumeCarousel > span:first-child { display: block; opacity: 1; } }
 
 .offer { background: var(--nucoe-grey) !important; }
