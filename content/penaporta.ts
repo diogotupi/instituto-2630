@@ -14,25 +14,26 @@ export const penaporta = {
   },
   event: {
     format: "Treinamento presencial",
-    duration: "Um dia de treinamento",
-    date: "Próxima data em breve",
-    schedule: "Horário a confirmar",
-    location: "Local a confirmar",
-    investment: "Investimento a confirmar",
+    duration: "11h de workshop",
+    date: "14 de novembro (sábado)",
+    schedule: "Das 9h às 20h",
+    location: "Unidade Estácio, Sulacap",
+    investment: "12x de R$ 23 no cartão",
   },
   problems: [
-    "Prioridades concorrentes e metas sem um caminho definido.",
+    "A procrastinação destrói a consistência e as metas se tornam inalcançáveis.",
     "Decisões reativas que mantêm você apagando incêndios.",
     "Planos que começam bem, mas perdem consistência na execução.",
     "Muito esforço investido sem avanço na direção que realmente importa.",
   ],
   workshopTopics: [
-    "Planejamento",
-    "Liderança e autoliderança",
-    "Tomada de decisão",
-    "Prioridades",
-    "Execução",
-    "Responsabilidade pelos resultados",
+    "SMARTIRIZE",
+    "Desenvolver estratégias",
+    "Alinhar a mentalidade",
+    "Ação consistente",
+    "Inteligência e controle emocional dos caveiras do BOPE/RJ",
+    "Faça um 360°",
+    "Flexibilidade",
   ],
   plan: [
     {
@@ -48,7 +49,7 @@ export const penaporta = {
     {
       code: "03",
       title: "Executar",
-      body: "Levar o planejamento para o Mapa Combat e convertê-lo em ações e compromissos práticos.",
+      body: "Levar o planejamento para a jornada da vida e converter ações em compromissos práticos.",
     },
   ],
   methodFlow: [
@@ -75,9 +76,9 @@ export const penaporta = {
   ],
   day: [
     "Identificar",
-    "Planejamento",
-    "Preparação",
-    "Execução hoje",
+    "Planejar",
+    "Preparar",
+    "E executar HOJE",
   ],
   faq: [
     {
@@ -90,7 +91,7 @@ export const penaporta = {
     },
     {
       question: "Posso levar um convidado?",
-      answer: "A regra de convidados depende da edição vigente e será informada junto às condições de inscrição.",
+      answer: "Sim. Garanta seu ingresso e leve um convidado.",
     },
     {
       question: "É presencial?",
@@ -98,7 +99,7 @@ export const penaporta = {
     },
     {
       question: "Qual é a duração?",
-      answer: "É um dia inteiro de treinamento. Os horários exatos serão informados no bloco da próxima edição.",
+      answer: "São 11 horas de workshop, das 9h às 20h, no sábado, 14 de novembro.",
     },
     {
       question: "O que preciso levar?",
@@ -110,11 +111,11 @@ export const penaporta = {
     },
     {
       question: "Onde será?",
-      answer: "O endereço será publicado assim que a próxima edição estiver confirmada.",
+      answer: "Na Unidade Estácio, em Sulacap.",
     },
     {
       question: "Como funciona a inscrição?",
-      answer: "Quando a próxima edição abrir, o botão de inscrição levará diretamente ao checkout oficial com todas as condições.",
+      answer: "Clique no botão de inscrição para acessar o checkout oficial. O investimento é de 12x de R$ 23 no cartão. Garanta seu ingresso e leve um convidado.",
     },
     {
       question: "O evento é militar?",

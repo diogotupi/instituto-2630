@@ -24,6 +24,17 @@ const photos = {
 // Keep the animated version available for a future edition.
 const showTestimonialCarousel = false;
 
+const trainerResumePlaceholder = ["Lorem ipsum dolor sit amet", "Consectetur adipiscing elit", "Sed do eiusmod tempor incididunt"];
+
+function TrainerResume({ name }: { name: string }) {
+  return <div className={styles.trainerResume} aria-label={`Currículo de ${name}: conteúdo provisório`}>
+    <span className={styles.resumeLabel}>Currículo em breve</span>
+    <div className={styles.resumeCarousel} aria-hidden="true">
+      {trainerResumePlaceholder.map((text, index) => <span key={text} style={{ animationDelay: `${index * 4}s` }}>{text}</span>)}
+    </div>
+  </div>;
+}
+
 const testimonials = [
   {
     name: "Karine Silva",
@@ -57,12 +68,12 @@ export function PenaPortaSections() {
               <h1 className={styles.heroTitle}><span>Planeje bem</span><strong>e os resultados</strong><span>serão bons.</span></h1>
             </Reveal>
             <Reveal delayMs={190}>
-              <p className={styles.heroLede}>Um dia inteiro para transformar objetivos em planejamento, prioridades e ações executáveis — usando os 7 Atributos e o Mapa Combat.</p>
+              <p className={styles.heroLede}>Um dia inteiro para transformar objetivos em planejamento, prioridades e ações executáveis — usando os 7 atributos das Operações Especiais e o Mapa Combat.</p>
             </Reveal>
             <Reveal delayMs={240}>
               <div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.purchase} /></div>
               <div className={styles.heroMeta} aria-label="Informações principais">
-                <span>Evento presencial</span><span>Um dia de treinamento</span><span>Método prático</span><span>Aplicação</span>
+                <span>Evento presencial</span><span>11h de workshop</span><span>Método prático</span><span>Aplicação</span>
               </div>
             </Reveal>
           </div>
@@ -73,7 +84,7 @@ export function PenaPortaSections() {
         <div className={`section__inner ${styles.problemGrid}`}>
           <Reveal>
             <p className="eyebrow">Antes de agir</p>
-            <h2 className="headline headline--wide">Você está executando um plano — ou apenas reagindo ao que aparece?</h2>
+            <h2 className="headline headline--wide">Você está executando um plano — ou apenas reagindo às circunstâncias?</h2>
             <p className="lede">Trabalhar muito não significa avançar. Sem direção, a urgência ocupa o lugar da prioridade e o esforço vira repetição.</p>
           </Reveal>
           <div className={styles.problemList}>
@@ -93,8 +104,8 @@ export function PenaPortaSections() {
         <div className="section__inner">
           <Reveal className={styles.thesisCopy}>
             <p className="eyebrow">A tese</p>
-            <h2 className="headline headline--wide">Resultado é consequência de preparação.</h2>
-            <p className="lede">Planejamento não é burocracia. É o que aumenta sua capacidade de decidir e agir quando a realidade muda. O Pé na Porta traz essa lógica para a vida e para a empresa: entender o cenário, organizar recursos, definir prioridades e executar com clareza.</p>
+            <h2 className="headline headline--wide">Resultado é fruto das estratégias.</h2>
+            <p className="lede">Planejamento não é burocracia. É o que aumenta sua capacidade de decidir e agir quando a realidade muda. O Pé na Porta traz essa lógica do BOPE/RJ para sua vida e sua empresa: entender o cenário, organizar recursos, definir prioridades e executar com clareza.</p>
             <blockquote>“Planeje bem e os resultados serão bons.”</blockquote>
           </Reveal>
         </div>
@@ -104,8 +115,8 @@ export function PenaPortaSections() {
         <div className="section__inner">
           <Reveal>
             <p className="eyebrow">O que é o Pé na Porta</p>
-            <h2 className="headline headline--wide">Um dia para sair do improviso e entrar em modo de execução.</h2>
-            <p className="lede">Um workshop presencial e prático para pensar, decidir, planejar e agir de forma mais consciente. Você participa, escreve, discute, aplica e define o próximo movimento.</p>
+            <h2 className="headline headline--wide">Um dia para sair do improviso e entrar em modo de realização.</h2>
+            <p className="lede">Um workshop presencial e prático para aprender a ter clareza, planejar, se preparar e entrar em ação. Você participa, escreve, discute, aplica e define o próximo movimento.</p>
           </Reveal>
           <div className={styles.topicGrid}>
             {penaporta.workshopTopics.map((item, index) => (
@@ -122,7 +133,7 @@ export function PenaPortaSections() {
           <Reveal className={styles.trainingMomentCopy}>
             <p className="eyebrow">Na prática</p>
             <h2 className="headline">O método ganha forma quando o time entra em movimento.</h2>
-            <p className="lede">Análise, colaboração e decisão deixam de ser discurso para virar ação em conjunto.</p>
+            <p className="lede">Identificar, decidir e agir deixam de ser discurso para virar conquistas.</p>
           </Reveal>
           <div className={styles.trainingMomentGallery}>
             {photos.workshop.map((photo, index) => (
@@ -138,7 +149,7 @@ export function PenaPortaSections() {
         <div className="section__inner">
           <Reveal>
             <p className="eyebrow">7 Atributos + Mapa Combat</p>
-            <h2 className="headline headline--wide">Você não vai sair apenas com anotações. Vai sair com um mapa.</h2>
+            <h2 className="headline headline--wide">Você não vai sair apenas com anotações. Vai sair com um mapa para as próximas conquistas.</h2>
             <p className="lede">Os 7 Atributos estruturam o planejamento. O Mapa Combat transforma clareza em ações práticas, responsáveis e acompanháveis.</p>
           </Reveal>
 
@@ -170,11 +181,11 @@ export function PenaPortaSections() {
             <p className="eyebrow">Experiência que orienta</p>
             <h2 className="headline headline--wide">Quem são seus treinadores.</h2>
             <p className="lede">Freitas e Wallace unem experiência em operações especiais, liderança e aplicação prática para conduzir o Pé na Porta.</p>
-            <p>São fundadores do Instituto 2630 e traduzem preparação, responsabilidade, unidade, treinamento e execução para decisões reais de pessoas, times e empresas.</p>
+            <p>São fundadores do Instituto 2630 e traduzem o treinamento e a pressão dos combates no BOPE/RJ para as decisões reais na vida, na liderança, nos times e nas empresas.</p>
           </Reveal>
           <div className={styles.founders}>
-            <Reveal className={styles.founderCard}><div className={styles.founderImage}><Image src={assetPath("/freitas-original.png")} alt="Freitas, treinador do Pé na Porta" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>26</span><strong>Freitas</strong></Reveal>
-            <Reveal delayMs={90} className={styles.founderCard}><div className={`${styles.founderImage} ${styles.wallaceImage}`}><Image src={assetPath("/wallace.png")} alt="Wallace, treinador do Pé na Porta" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>30</span><strong>Wallace</strong></Reveal>
+            <Reveal className={styles.founderCard}><div className={styles.founderImage}><Image src={assetPath("/freitas-original.png")} alt="Freitas, treinador do Pé na Porta" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>26</span><strong>Freitas</strong><TrainerResume name="Freitas" /></Reveal>
+            <Reveal delayMs={90} className={styles.founderCard}><div className={`${styles.founderImage} ${styles.wallaceImage}`}><Image src={assetPath("/wallace.png")} alt="Wallace, treinador do Pé na Porta" fill sizes="(max-width: 800px) 90vw, 24vw" /></div><span>30</span><strong>Wallace</strong><TrainerResume name="Wallace" /></Reveal>
           </div>
         </div>
       </section>
@@ -192,7 +203,7 @@ export function PenaPortaSections() {
 
       <section id="jornada" className={`section section--dark ${styles.day}`}>
         <div className="section__inner">
-          <Reveal><p className="eyebrow">O que acontece durante o dia</p><h2 className="headline">Identificar. Planejamento. Preparação. Execução hoje.</h2></Reveal>
+          <Reveal><p className="eyebrow">O que acontece durante o dia</p><p className={styles.journeyIntro}>Você vai</p><h2 className={styles.journeyTitle}>Identificar. Planejar. Preparar. E executar HOJE.</h2></Reveal>
           <div className={styles.timeline}>
             {penaporta.day.map((item, index) => (
               <Reveal as="article" key={item} delayMs={index * 65} className={styles.timelineItem}>
@@ -256,7 +267,7 @@ export function PenaPortaSections() {
           <Reveal>
             <p className="eyebrow">Próxima edição</p>
             <h2 className="headline">Um dia para construir direção.</h2>
-            <p className="lede">As informações abaixo serão atualizadas assim que a próxima turma estiver aberta para inscrição.</p>
+            <p className="lede">14 de novembro, das 9h às 20h, na Unidade Estácio, Sulacap. Garanta seu ingresso e leve um convidado.</p>
           </Reveal>
           <Reveal delayMs={110} className={styles.offerCard}>
             <strong className={styles.offerTitle}>Pé na Porta</strong>
@@ -269,7 +280,7 @@ export function PenaPortaSections() {
               <div><dt>Investimento</dt><dd>{penaporta.event.investment}</dd></div>
             </dl>
             <PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.duo} />
-            <p className="micro">Inscrições pelo checkout oficial. Para dúvidas, fale diretamente com o Léo.</p>
+            <p className="micro">Garanta seu ingresso e leve um convidado. Para dúvidas, fale diretamente com o Léo.</p>
           </Reveal>
         </div>
       </section>
