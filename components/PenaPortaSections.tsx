@@ -24,13 +24,36 @@ const photos = {
 // Keep the animated version available for a future edition.
 const showTestimonialCarousel = false;
 
-const trainerResumePlaceholder = ["Lorem ipsum dolor sit amet", "Consectetur adipiscing elit", "Sed do eiusmod tempor incididunt"];
+const trainerResumes = {
+  Freitas: [
+    "Trainer de liderança e autoliderança",
+    "Policial veterano do BOPE",
+    "Ações táticas",
+    "Analista de recursos humanos",
+    "Master Practitioner PNL",
+    "Constelador sistêmico",
+    "Especialista em sabotadores",
+    "Pós em Neurociência e Psicologia Positiva",
+    "Autor do livro: Da Faca à Tesoura",
+  ],
+  Wallace: [
+    "Trainer de liderança",
+    "1º sargento do BOPE",
+    "Comandante da Alpha 4",
+    "Operações especiais",
+    "Ações táticas",
+    "Sniper",
+    "Paraquedista militar",
+    "Cursando Psicanálise",
+    "Master PNL",
+  ],
+};
 
-function TrainerResume({ name }: { name: string }) {
-  return <div className={styles.trainerResume} aria-label={`Currículo de ${name}: conteúdo provisório`}>
-    <span className={styles.resumeLabel}>Currículo em breve</span>
-    <div className={styles.resumeCarousel} aria-hidden="true">
-      {trainerResumePlaceholder.map((text, index) => <span key={text} style={{ animationDelay: `${index * 4}s` }}>{text}</span>)}
+function TrainerResume({ name }: { name: keyof typeof trainerResumes }) {
+  return <div className={styles.trainerResume} aria-label={`Especializações de ${name}`}>
+    <span className={styles.resumeLabel}>Especializações</span>
+    <div className={styles.resumeCarousel}>
+      {trainerResumes[name].map((text, index) => <span key={text} style={{ animationDelay: `${index * 4}s` }}>{text}</span>)}
     </div>
   </div>;
 }
