@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, ChevronDown, Menu, Pause, Play, Volume2, VolumeX, X } from 'lucide-react';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const products = [
@@ -122,6 +123,7 @@ export default function Home() {
   }, []);
 
   return (
+    <>
     <main className="site-shell">
       <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
         <a href="#home" className="brand" aria-label="Instituto 2630" />
@@ -219,5 +221,7 @@ export default function Home() {
 
       <footer id="contato" className="home-footer"><div className="footer-top motion"><p className="eyebrow red">Pronto para o próximo nível?</p><h2>Vamos <em>conversar.</em></h2><a className="button-primary" href="mailto:contato@instituto2630.com.br">Entre em contato <ArrowUpRight size={17} /></a></div><div className="footer-bottom"><a href="#home" className="brand" aria-label="Instituto 2630" /><span>© 2026 Instituto 2630</span><span>Desenvolvimento humano & empresarial</span></div></footer>
     </main>
+    <FloatingWhatsApp href="https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0" />
+    </>
   );
 }
