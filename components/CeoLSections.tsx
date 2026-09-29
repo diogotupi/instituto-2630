@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Reveal } from "@/components/Reveal";
+import { StickyCta } from "@/components/StickyCta";
 import { assetPath } from "@/lib/assetPath";
 import { ceol } from "@/content/ceol";
 import styles from "./CeoLSections.module.css";
@@ -15,7 +17,7 @@ function CeoLActionButtons({ dark = false }: { dark?: boolean }) {
 
 export function CeoLSections() {
   return <main className={styles.page}>
-    <section className={`section section--dark ${styles.hero}`}>
+    <section className={`section section--dark ${styles.hero}`} id="hero">
       <Image src={assetPath("/ceo-l-hero.png")} alt="Freitas e Wallace no CEO-L" fill priority className={styles.heroImage} />
     </section>
     <section className={`section section--dark ${styles.heroCopy}`}>
@@ -31,5 +33,7 @@ export function CeoLSections() {
     <section className="section section--dark" id="para-quem"><div className="section__inner"><Reveal><p className="eyebrow">Para quem carrega responsabilidade</p><h2 className="headline">Elevar o padrão de liderança começa por você.</h2></Reveal><div className={styles.audience}><p>Empresários, empreendedores, diretores, executivos, gestores e profissionais que precisam decidir sob pressão, construir confiança e liderar sem perder a si mesmos.</p><p className={styles.muted}>Não é para quem busca apenas curiosidade sobre o BOPE, entretenimento extremo ou uma prova física.</p></div></div></section>
     <section className={`section section--light ${styles.offer}`} id="oferta"><div className="section__inner"><Reveal><p className="eyebrow red">Experiência real</p><h2 className="headline">Antes de liderar melhor os outros, compreenda quem está liderando.</h2><div className={styles.eventDetails}><p><span>Próxima turma</span>9, 10 e 11 de outubro</p><p><span>Horário</span>Sexta, 20h, até domingo, 16h</p><p><span>Turma</span>Apenas 12 alunos</p></div><p className="lede">O investimento inclui hospedagem, equipamentos, uniformes e alimentação durante todo o período do curso.</p><CeoLActionButtons /></Reveal></div></section>
     <section className="section section--dark" id="contato"><div className="section__inner"><Reveal><p className="eyebrow">CEO-L</p><h2 className="headline">Não importa o problema, liderar é a solução.</h2><p className="lede">Lidere-se.</p><CeoLActionButtons dark /></Reveal></div></section>
+    <StickyCta checkoutUrl="https://formulario2630.com.br/ceo-l" label="Entrar para lista de espera" />
+    <div className={styles.mobileWhatsApp}><FloatingWhatsApp href={ceol.whatsappUrl} /></div>
   </main>;
 }

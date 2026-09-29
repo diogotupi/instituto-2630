@@ -64,6 +64,9 @@
 .whatsappButton:hover { transform: translateY(-3px); background: #25d366; color: #102318; box-shadow: 0 12px 30px rgb(37 211 102 / 25%); }
 .offerActionsDark { justify-content: flex-start; }
 .offerActionsDark .whatsappButton { color: #7ef0aa; }
+.page :global(.sticky-cta) { position: fixed; z-index: 55; right: 1rem; bottom: 1rem; left: 1rem; display: flex; justify-content: center; pointer-events: none; opacity: 0; transform: translateY(20px); transition: opacity .35s ease, transform .35s ease; }
+.page :global(.sticky-cta.is-visible) { opacity: 1; transform: none; pointer-events: auto; }
+.mobileWhatsApp { display: contents; }
 @media (max-width: 800px) {
   .page :global(.section) { padding-block: 4.75rem; }
   .page :global(.headline) { font-size: clamp(2.9rem, 12.5vw, 4.25rem); }
@@ -81,4 +84,7 @@
   .eventDetails p { min-height: auto; }
   .offerActions { display: grid; grid-template-columns: 1fr; }
   .offerActions :global(.button-primary), .whatsappButton { width: 100%; }
+}
+@media (min-width: 801px) {
+  .page :global(.sticky-cta), .mobileWhatsApp { display: none; }
 }
