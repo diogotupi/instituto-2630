@@ -72,7 +72,7 @@ export function CeoLSections() {
                 <footer><strong>{testimonial.name}</strong><span>{testimonial.role}</span></footer>
               </div>
               <div className={styles.testimonialPortrait}>
-                <Image src={testimonialImage(testimonial.image)} alt={`Retrato de ${testimonial.name}`} fill sizes="(max-width: 720px) 90vw, 40vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
+                <Image src={testimonialImage(testimonial.image)} alt={`Retrato de ${testimonial.name}`} fill unoptimized sizes="(max-width: 720px) 90vw, 40vw" style={{ objectFit: "cover", objectPosition: "center top" }} />
               </div>
             </article>
           ))}
