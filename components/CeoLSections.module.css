@@ -34,7 +34,7 @@
 .hero :global(.section__inner), .photoSection :global(.section__inner) { position: relative; z-index: 1; }
 .hero :global(.headline) { max-width: 12ch; font-size: clamp(4.1rem, 8vw, 8.4rem); }
 .hero :global(.lede) { max-width: 620px; }
-.hero :global(.button-primary), .offer :global(.button-primary) { display: inline-flex; margin-top: 2rem; }
+.hero :global(.button-primary), .offer :global(.button-primary) { display: inline-flex; }
 .hero :global(.micro) { margin-top: 2rem; color: #c8c0c0; }
 .statement { margin-top: 3rem; color: var(--red); font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 3rem); text-transform: uppercase; }
 .photoSection { min-height: min(680px, 76vw); display: grid; align-items: center; }
@@ -62,6 +62,8 @@
 .offerActions :global(.button-primary) { display: inline-flex; align-items: center; justify-content: center; margin: 0; }
 .whatsappButton { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; padding: .8rem 1rem; border: 1px solid rgb(37 211 102 / 72%); background: rgb(37 211 102 / 12%); color: #116d35; font-family: var(--font-display); font-size: .86rem; font-weight: 800; letter-spacing: .05em; text-align: center; text-transform: uppercase; transition: transform .25s var(--ease-out), background .25s ease, box-shadow .25s ease; }
 .whatsappButton:hover { transform: translateY(-3px); background: #25d366; color: #102318; box-shadow: 0 12px 30px rgb(37 211 102 / 25%); }
+.offerActionsDark { justify-content: flex-start; }
+.offerActionsDark .whatsappButton { color: #7ef0aa; }
 @media (max-width: 800px) {
   .page :global(.section) { padding-block: 4.75rem; }
   .page :global(.headline) { font-size: clamp(2.9rem, 12.5vw, 4.25rem); }
