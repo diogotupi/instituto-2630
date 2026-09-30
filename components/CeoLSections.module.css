@@ -66,6 +66,7 @@
 .testimonialPortrait { position: relative; min-height: 430px; overflow: hidden; background: radial-gradient(ellipse at 55% 45%, #522020, #211515 55%, #151212 80%); }
 .testimonialPortrait::after { position: absolute; inset: 0; content: ""; background: linear-gradient(0deg, #151212, transparent 25%); pointer-events: none; }
 .offer { text-align: center; }
+.offer :global(.headline) { margin-inline: auto; }
 .offer :global(.lede) { max-width: 600px; margin-inline: auto; }
 .eventDetails { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 820px; margin: 2.75rem auto; text-align: left; }
 .eventDetails p { display: grid; gap: .45rem; min-height: 112px; margin: 0; padding: 1rem 1.15rem; border-left: 2px solid var(--red); background: #e4dedd; color: var(--ceol-ink); font-size: 1rem; font-weight: 700; line-height: 1.35; }
