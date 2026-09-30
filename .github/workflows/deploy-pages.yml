@@ -41,6 +41,12 @@ jobs:
             mkdir -p "dist/client/$name"
             cp "$page" "dist/client/$name/index.html"
           done
+      - name: Support the custom domain and GitHub project URL
+        run: |
+          mv dist/client dist/site-root
+          mkdir -p dist/client/instituto-2630
+          cp -a dist/site-root/. dist/client/
+          cp -a dist/site-root/. dist/client/instituto-2630/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client
