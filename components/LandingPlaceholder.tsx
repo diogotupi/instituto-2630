@@ -8,7 +8,7 @@ type LandingPlaceholderProps = {
 };
 
 export function LandingPlaceholder({ eyebrow, title, category }: LandingPlaceholderProps) {
-  const homeHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/`;
+  const homeHref = "/";
 
   return (
     <main className={styles.page}>

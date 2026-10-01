@@ -12,7 +12,7 @@ type Props = {
 };
 
 export function SiteHeader({ checkoutUrl, ctaLabel }: Props) {
-  const homeHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/`;
+  const homeHref = "/";
 
   return (
     <header className={styles.header}>

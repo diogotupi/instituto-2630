@@ -4,13 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, ChevronDown, Menu, Pause, Play, Volume2, VolumeX, X } from 'lucide-react';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const products = [
-  { label: 'Pé Na Porta', href: `${basePath}/penaporta` },
-  { label: 'School of Skull', href: `${basePath}/school-of-skull` },
-  { label: 'OPESP', href: `${basePath}/opesp` },
-  { label: 'Instituto In Company', href: `${basePath}/instituto-in-company` },
-  { label: 'CEO-L', href: `${basePath}/ceo-l` },
+  { label: 'Pé Na Porta', href: '/penaporta' },
+  { label: 'School of Skull', href: '/school-of-skull' },
+  { label: 'OPESP', href: '/opesp' },
+  { label: 'Instituto In Company', href: '/instituto-in-company' },
+  { label: 'CEO-L', href: '/ceol' },
 ];
 const clientLogos = [
   { name: 'MyBirds', src: 'https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/5mybirds.webp' },
