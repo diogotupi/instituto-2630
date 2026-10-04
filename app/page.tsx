@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section id="home" className="hero">
+      <section id="home" className="hero" style={{ "--home-hero-image": "url('/hero-training.jpg')" } as React.CSSProperties}>
         <div className="hero-grid" /><div className="hero-lines" />
         <div className="hero-copy motion"><p className="eyebrow"><span /> Centro de excelência em desenvolvimento humano</p><h1 className="hero-title">Não importa o problema,<br /><em>liderar é a solução</em></h1><p className="hero-subtitle">Lidere-se</p><a href="#quem-somos" className="button-primary">Conheça o Instituto <ArrowDown size={17} /></a></div>
         <div className="hero-stamp"><strong>2630</strong><span>MENTE<br />CORPO<br />PROPÓSITO</span></div>
