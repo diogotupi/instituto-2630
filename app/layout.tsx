@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
+import { assetPath } from '@/lib/assetPath';
 import { Manrope } from 'next/font/google';
 import './globals.css';
 
@@ -23,7 +25,10 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/dlb7wlq.css" />
       </head>
-      <body>{children}</body>
+      <body style={{
+        '--brand-image': `url("${assetPath('/logo-negativo.png')}")`,
+        '--intro-image': `url("${assetPath('/about-training.jpg')}")`,
+      } as CSSProperties}>{children}</body>
     </html>
   );
 }

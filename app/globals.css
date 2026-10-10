@@ -8,7 +8,7 @@ button{font:inherit}
 
 .nav{position:fixed;z-index:40;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:24px 6vw;transition:.3s}
 .nav-scrolled{padding-block:12px;background:#171313ed;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff16}
-.brand{width:76px;height:58px;background:url('https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/logo-negativo.png') center/contain no-repeat;display:block}
+.brand{width:76px;height:58px;background:var(--brand-image) center/contain no-repeat;display:block}
 .nav-links{display:flex;align-items:center;gap:32px;font-family:"termina",Arial,sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .nav-links>a,.product-menu>button{opacity:.72;transition:.2s}
 .nav-links>a:hover,.product-menu>button:hover{opacity:1}
@@ -58,7 +58,7 @@ em{font-style:normal;color:var(--red)}
 .section-index{position:absolute;left:5vw;top:145px;display:flex;gap:12px;writing-mode:vertical-rl;font:400 10px "space-mono";letter-spacing:.13em;color:var(--red);text-transform:uppercase}
 .section-index span{color:#777171}
 .intro{min-height:720px;display:flex;align-items:center;background:var(--cream);color:var(--ink)}
-.intro:after{content:"";position:absolute;right:0;top:0;width:43%;height:100%;background:linear-gradient(90deg,#f5f1f0 0%,#f5f1f000 62%),url('https://res.cloudinary.com/dc48hzb6b/image/upload/pictures/2630/about-training.jpg') center/cover;opacity:.45;mix-blend-mode:multiply}
+.intro:after{content:"";position:absolute;right:0;top:0;width:43%;height:100%;background:linear-gradient(90deg,#f5f1f0 0%,#f5f1f000 62%),var(--intro-image) center/cover;opacity:.45;mix-blend-mode:multiply}
 .intro-content{position:relative;z-index:2;margin-left:18%;max-width:690px}
 .intro h2,.products h2{font-size:clamp(4rem,7vw,7.2rem);line-height:.82;letter-spacing:-.035em;margin:25px 0 34px}
 .body-copy{max-width:460px;color:#403a3a;line-height:1.7;font-size:16px}
