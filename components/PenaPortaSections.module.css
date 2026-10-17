@@ -194,10 +194,10 @@
 }
 
 @media (max-width: 700px) {
-  .hero { min-height: 900px; padding-bottom: 2.8rem !important; }
-  .heroImage { object-position: center 47%; }
-  .heroShade { background: linear-gradient(180deg, rgb(0 0 0 / 22%) 0%, rgb(0 0 0 / 66%) 42%, rgb(0 0 0 / 94%) 73%); }
-  .heroGrid { min-height: 740px; align-items: end; }
+  .hero { min-height: 900px; padding-top: 400px !important; padding-bottom: 2.8rem !important; }
+  .heroImage { height: 500px !important; top: 65px !important; object-position: 85% center; }
+  .heroShade { background: linear-gradient(180deg, rgb(0 0 0 / 12%) 15%, rgb(0 0 0 / 55%) 35%, #171313 54%); }
+  .heroGrid { min-height: 0; align-items: end; }
   .heroCopy { padding-left: 0; border-left: 0; }
   .heroTitle { font-size: clamp(4.1rem, 19vw, 5.7rem); }
   .heroMeta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }

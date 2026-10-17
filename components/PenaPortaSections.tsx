@@ -10,7 +10,7 @@ import { penaporta, resolvePenaPortaCheckout } from "@/content/penaporta";
 import styles from "./PenaPortaSections.module.css";
 
 const photos = {
-  hero: "/pena-porta-hero-2026.png",
+  hero: "/images/penaporta-cover-20261017.png",
   preparation: "/pena-porta-preparacao.png",
   combat: "/pena-porta-mapa-combat.png",
   day: "/pena-porta-execucao-hoje.png",

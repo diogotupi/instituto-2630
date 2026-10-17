@@ -129,11 +129,11 @@ export default function FreitasPage() {
         </div>
         <div className={styles.heroPortrait}>
           <img
-            src={asset('/images/freitas-hero.png')}
-            alt="Freitas conduzindo uma palestra"
+            src={asset('/images/freitas-cover-20261017.png')}
+            alt="Freitas em retratos com uniforme do BOPE e traje civil, em composição com luz vermelha"
             fetchPriority="high"
-            width="682"
-            height="1024"
+            width="1672"
+            height="941"
           />
           <span className={styles.signature}>
             FREITAS<span>Instituto 26 30</span>

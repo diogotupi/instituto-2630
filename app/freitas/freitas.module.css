@@ -141,7 +141,7 @@
   position: absolute;
   inset: 0;
   object-fit: cover;
-  object-position: 52% 35%;
+  object-position: 100% center;
 }
 .heroPortrait:after {
   content: '';
@@ -454,7 +454,7 @@
     min-height: 0;
   }
   .heroPortrait > img {
-    object-position: 50% 34%;
+    object-position: 100% center;
   }
   .heroPortrait:after {
     background:
