@@ -190,7 +190,7 @@ export default function Home() {
         <article className="profile profile-freitas motion">
           <div className="profile-index">26</div>
           <div className="profile-portrait"><img src={assetPath('/freitas-full.png')} alt="Freitas, fundador do Instituto 2630" /></div>
-          <div className="profile-info"><span>Co-fundador · Instrutor</span><h3>Freitas</h3><p>Veterano de operações especiais e especialista em liderança, estratégia e desenvolvimento de alta performance.</p><a className="text-link" href="/freitas/">Conheça Freitas ↗</a><div className="profile-line" /></div>
+          <div className="profile-info"><span>Co-fundador · Instrutor</span><h3>Freitas</h3><p>Veterano de operações especiais e especialista em liderança, estratégia e desenvolvimento de alta performance.</p><div className="profile-line" /></div>
           <div className="profile-name-vertical">FREITAS</div>
         </article>
         <article className="profile profile-wallace motion">
