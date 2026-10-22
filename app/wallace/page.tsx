@@ -1,16 +1,15 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export uses native images and document navigation. */
-import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, AtSign } from 'lucide-react';
 import styles from './wallace.module.css';
 
 export const metadata = {
   title: 'Wallace — Página em preparação | Instituto 2630',
   description:
-    'Veterano do BOPE, palestrante e autor. Conheça a trajetória de Freitas e leve uma experiência de reflexão e desenvolvimento humano para sua empresa.',
+    'Conheça Wallace: trainer de liderança, 1º sargento do BOPE, comandante da Alpha 4 e cofundador do Instituto 2630.',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://instituto2630.com.br/wallace/' },
 };
-const contact =
-  'https://wa.me/5521981269626?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20para%20uma%20palestra%20do%20Freitas.';
+const contact = 'https://www.instagram.com/wcaveira53/';
 const asset = (path: string) =>
   `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 const themes = [
@@ -76,8 +75,8 @@ const reasons = [
     'Um briefing direto com o cliente para alinhar a palestra ao momento da equipe.',
   ],
   [
-    'Duas obras publicadas',
-    'Experiências reunidas em livros sobre escolhas e performance pessoal e profissional.',
+    'Operações especiais',
+    'Formação em operações especiais, ações táticas e como sniper e paraquedista militar.',
   ],
   [
     'Motivação com bom humor',
@@ -85,24 +84,22 @@ const reasons = [
   ],
   [
     'Diferentes perspectivas',
-    'Vivências no BOPE e estudos em neurociência e PNL compõem seu repertório.',
+    'Master PNL e estudos em psicanálise ampliam seu repertório para o desenvolvimento de pessoas.',
   ],
 ];
 const qualifications = [
-  ['Policial militar', '2005'],
-  ['Ações táticas', 'BOPE · 2006'],
-  ['Recursos humanos', 'Estácio'],
-  ['Pós em neurociência', 'PUC-PR'],
-  ['Pós em psicologia positiva', 'PUC-PR'],
-  ['Pós em mindfulness', 'PUC-PR'],
-  ['Master PNL', 'INAP'],
-  ['Master Coach', 'IBC'],
-  ['Constelador familiar, empresarial e sistêmico', 'INAP'],
-  ['Especialista em sabotadores', 'IGT'],
-  ['Especialista em perfil comportamental', 'IGT'],
+  ['Trainer de liderança', 'Desenvolvimento de líderes'],
+  ['1º sargento', 'BOPE'],
+  ['Comandante da Alpha 4', 'Liderança de equipe'],
+  ['Operações especiais', 'Formação operacional'],
+  ['Ações táticas', 'Formação operacional'],
+  ['Sniper', 'Especialização operacional'],
+  ['Paraquedista militar', 'Formação militar'],
+  ['Psicanálise', 'Cursando'],
+  ['Master PNL', 'Programação neurolinguística'],
 ];
 function ContactButton({
-  label = 'Leve Freitas para sua empresa',
+  label = 'Fale com Wallace no Instagram',
 }: {
   label?: string;
 }) {
@@ -126,7 +123,7 @@ export default function WallacePage() {
             alt="Instituto 2630"
           />
         </a>
-        <nav aria-label="Navegação Freitas">
+        <nav aria-label="Navegação Wallace">
           <a href="#trajetoria">Trajetória</a>
           <a href="#palestra">A palestra</a>
           <a href="#contato">
@@ -136,7 +133,7 @@ export default function WallacePage() {
       </header>
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <p className={styles.kicker}>Freitas / Palestrante & autor</p>
+          <p className={styles.kicker}>Wallace / Trainer de liderança</p>
           <h1>
             Transformar
             <br />
@@ -169,15 +166,15 @@ export default function WallacePage() {
         </div>
       </section>
       <div className={styles.strip}>
-        <span>Veterano do BOPE</span>
-        <span>Palestrante</span>
-        <span>Autor de 2 livros</span>
-        <span>Empresário</span>
+        <span>1º sargento do BOPE</span>
+        <span>Comandante da Alpha 4</span>
+        <span>Trainer de liderança</span>
+        <span>Master PNL</span>
       </div>
       <section id="trajetoria" className={`${styles.section} ${styles.light}`}>
         <div className={styles.split}>
           <div>
-            <p className={styles.kicker}>01 / Uma história de escolhas</p>
+            <p className={styles.kicker}>01 / Experiência & liderança</p>
             <h2>
               Vencer a si mesmo,
               <br />
@@ -188,35 +185,30 @@ export default function WallacePage() {
           </div>
           <div className={styles.prose}>
             <p>
-              Inspirado por um amigo, Freitas, um jovem carioca, na ocasião com
-              18 anos, decidiu ingressar na Polícia Militar do Rio de Janeiro.
-              Foco e meta renderam a ele aprovação no primeiro concurso, aos 21.
-              Em seguida, aos 23 anos, foi aprovado para o BOPE, elite da PM
-              sonhada por muitos jovens.
+              Wallace é trainer de liderança, 1º sargento do BOPE e comandante
+              da Alpha 4. Sua experiência reúne liderança de equipe, operações
+              especiais e ações táticas.
             </p>
             <p>
-              Sete anos depois de ingressar no batalhão de elite, enfrentando
-              missões de vida e morte, muitas delas narradas em suas palestras,
-              Freitas decide abandonar a carreira militar para desbravar um novo
-              caminho profissional.
+              Sua formação inclui as especializações de sniper e paraquedista
+              militar, que compõem seu repertório operacional.
             </p>
             <p>
-              Vivenciou fracassos, frustrações e vitórias que lhe renderam não
-              só a carreira de treinador e empresário bem-sucedido, mas também
-              de autor e palestrante.
+              É Master PNL e está cursando psicanálise, ampliando sua formação
+              voltada à compreensão do comportamento humano.
             </p>
             <p>
-              Abordando temas como a essência do combate, sua jornada é um sopro
-              de vida àqueles que buscam um exemplo real de coragem e superação.
+              Como cofundador do Instituto 2630, atua no desenvolvimento de
+              líderes e equipes.
             </p>
           </div>
         </div>
-        <div className={styles.timeline}>
+        <div className={`${styles.timeline} ${styles.careerHighlights}`}>
           {[
-            ['18', 'anos · decisão de ser caveira'],
-            ['23', 'anos · ingresso no BOPE'],
-            ['30', 'anos · falência e depressão'],
-            ['43', 'anos · empresário, palestrante e treinador'],
+            ['BOPE', '1º sargento'],
+            ['Alpha 4', 'Comandante'],
+            ['PNL', 'Master'],
+            ['Liderança', 'Trainer'],
           ].map(([n, label]) => (
             <div key={n}>
               <strong>{n}</strong>
@@ -239,25 +231,22 @@ export default function WallacePage() {
           </h2>
           <div className={styles.prose}>
             <p>
-              Minha passagem pelo curso do BOPE, um dos mais difíceis do mundo,
-              a tentativa de suicídio após deixar as fileiras do batalhão para
-              empreender e a volta por cima como empresário e treinador me dão
-              base para sustentar uma tese: a autoliderança e a liderança são
-              fundamentais para a construção de uma vida de sucesso.
+              A liderança de equipes e a formação em operações especiais fazem
+              parte da experiência de Wallace como 1º sargento do BOPE e
+              comandante da Alpha 4.
             </p>
             <p>
-              Foi enfrentando a depressão, reconhecendo minhas fraquezas e
-              reconstruindo minha identidade que compreendi que, antes de
-              liderar outras pessoas, precisava aprender a liderar a mim mesmo.
+              Como trainer de liderança, conecta essa experiência ao
+              desenvolvimento de pessoas no Instituto 2630.
             </p>
             <p>
-              Quando essa compreensão acontece, liderar pessoas, desenvolver
-              talentos e transformar colaboradores em uma unidade torna-se uma
-              consequência natural da nossa própria evolução.
+              Sua formação como Master PNL e seus estudos em psicanálise
+              acrescentam novas perspectivas à compreensão do comportamento
+              humano.
             </p>
             <p>
-              Afinal, a tropa é o espelho do guia. Seus colaboradores refletem
-              não apenas suas virtudes, mas também suas deficiências.
+              Autoliderança, ação, adaptação e equilíbrio orientam os quatro
+              pilares apresentados a seguir.
             </p>
           </div>
         </div>
@@ -305,7 +294,7 @@ export default function WallacePage() {
       <section className={`${styles.section} ${styles.light}`}>
         <div className={styles.split}>
           <div className={styles.reasonIntro}>
-            <p className={styles.kicker}>03 / Por que levar Freitas</p>
+            <p className={styles.kicker}>03 / Por que levar Wallace</p>
             <h2>
               Sete motivos.
               <br />
@@ -331,9 +320,9 @@ export default function WallacePage() {
       <section className={styles.section} id="livros">
         <p className={styles.kicker}>04 / Além do palco</p>
         <h2>
-          Duas obras.
+          Conhecimento
           <br />
-          <em>A mesma mensagem.</em>
+          <em>compartilhado.</em>
         </h2>
         <p className={styles.bookIntro}>
           Nossa história não é determinada apenas pelo que vivemos, mas pelas
@@ -341,29 +330,7 @@ export default function WallacePage() {
         </p>
         <div className={styles.books}>
           <article>
-            <span className={styles.number}>Livro / 01</span>
-            <div
-              className={styles.bookCover}
-              role="img"
-              aria-label="Capa de Da faca à tesoura — imagem em breve"
-            >
-              <span>
-                Da faca
-                <br />à tesoura
-              </span>
-              <small>Capa em breve</small>
-            </div>
-            <h3>Da faca à tesoura</h3>
-            <p>
-              Uma história real sobre escolhas, recomeços e a coragem necessária
-              para mudar a mentalidade e seguir um novo caminho.
-            </p>
-            <span className={styles.bookDetail}>
-              Dos combates no BOPE às missões no mundo da moda.
-            </span>
-          </article>
-          <article>
-            <span className={styles.number}>Livro / 02</span>
+            <span className={styles.number}>Coautoria</span>
             <div
               className={styles.bookCover}
               role="img"
@@ -403,7 +370,9 @@ export default function WallacePage() {
         </div>
       </section>
       <section id="empresas" className={styles.clients}>
-        <p className={styles.kicker}>Empresas presentes nessa trajetória</p>
+        <p className={styles.kicker}>
+          Empresas na trajetória do Instituto 2630
+        </p>
         <h2>
           Confiança construída.
           <br />
@@ -441,33 +410,25 @@ export default function WallacePage() {
           é construída a partir de um briefing para conectar a palestra à sua
           realidade.
         </p>
-        <ContactButton label="Solicitar proposta pelo WhatsApp" />
+        <ContactButton label="Conversar com Wallace no Instagram" />
         <div className={styles.contactLinks}>
-          <a href="mailto:freitasvinteseis@gmail.com">
-            freitasvinteseis@gmail.com
-          </a>
-          <a href="tel:+5521981269626">(21) 98126-9626</a>
-          <a
-            href="https://www.instagram.com/26freitas/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            @26freitas ↗
+          <a href={contact} target="_blank" rel="noreferrer">
+            @wcaveira53 ↗
           </a>
         </div>
       </section>
       <footer className={styles.footer}>
         <a href="/">← Instituto 2630</a>
-        <span>Freitas · Transformar corações e mentes, vidas e empresas.</span>
+        <span>Wallace · Trainer de liderança · Instituto 2630.</span>
       </footer>
       <a
         className={styles.whatsapp}
         href={contact}
         target="_blank"
         rel="noreferrer"
-        aria-label="Conversar sobre a palestra de Freitas no WhatsApp"
+        aria-label="Falar com Wallace pelo Instagram"
       >
-        <MessageCircle size={25} aria-hidden />
+        <AtSign size={25} aria-hidden />
       </a>
     </main>
   );

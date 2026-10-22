@@ -235,6 +235,9 @@
     sans-serif;
   color: #cc001e;
 }
+.careerHighlights strong {
+  font-size: clamp(30px, 3vw, 44px);
+}
 .timeline span {
   font-size: 12px;
 }
@@ -491,8 +494,8 @@
   height: 54px;
   display: grid;
   place-items: center;
-  background: #25d366;
-  color: #073a1b;
+  background: #cc001e;
+  color: #fff;
   box-shadow: 0 6px 24px #0003;
 }
 @media (max-width: 760px) {
