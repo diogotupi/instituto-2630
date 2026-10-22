@@ -13,22 +13,49 @@ const contact =
 const asset = (path: string) =>
   `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 const themes = [
+  ['Lidere-se', 'Se der certo, nós vencemos; se der errado, é tudo comigo.'],
+  ['Mova-se', 'Planeje bem, entre em ação e os resultados serão bons.'],
   [
-    'Pessoas',
-    'O valor de quem caminha ao nosso lado e o impacto das relações na nossa trajetória.',
+    'Adapte-se',
+    'Seja flexível ao ponto de mudar tudo que for preciso para gerar resultado.',
   ],
-  [
-    'Escolhas',
-    'Como decisões difíceis moldam quem nos tornamos e abrem novos caminhos.',
-  ],
-  [
-    'Superação',
-    'Lições sobre enfrentar desafios, recomeçar e construir uma nova história.',
-  ],
-  [
-    'Gratidão',
-    'Reconhecer quem faz parte da nossa jornada e dar sentido às conquistas.',
-  ],
+  ['Equalize-se', 'Seu corpo e sua mente estão integrados. Evolua.'],
+];
+const testimonials = [
+  {
+    name: 'Jean Carlos',
+    role: 'CEO — Alfa Consórcios e Investimentos',
+    quote:
+      'O CEO-L não foi apenas um treinamento. Foi um divisor de águas na minha empresa, na minha vida e na vida dos meus colaboradores.',
+  },
+  {
+    name: 'Guilherme Pôncio',
+    role: 'CEO do Grupo Autobem',
+    quote:
+      'Quero agradecer o Instituto 2630 pela transformação em nossos colaboradores. Eles aprenderam a lidar com a pressão e hoje eu posso dizer que tenho um time de forças especiais dentro da minha empresa.',
+  },
+  {
+    name: 'Fernando Carvalho',
+    role: 'CEO da Fitlog',
+    quote:
+      'Levei meus líderes e colaboradores na esperança que eles se transformassem em um verdadeiro time. Hoje eu tenho uma equipe de operações especiais dentro da empresa.',
+  },
+];
+const clients = [
+  { name: 'Blue3', image: '/4blue3.webp' },
+  { name: 'Petrobras', image: '/12petrobras.webp' },
+  { name: 'Porto', image: '/10porto-seguro.webp' },
+  { name: 'Inter’ISP', image: '/3inter.webp' },
+  { name: 'MyBirds', image: '/5mybirds.webp' },
+  { name: 'Rede Autobem', image: '/1autobem.webp' },
+  { name: 'Diferen/TI', image: '' },
+  { name: 'Petromar', image: '/7petromar.webp' },
+  { name: 'Nova Época Imóveis', image: '' },
+  { name: 'Idex', image: '/9idex.webp' },
+  { name: 'Carraro', image: '/11carraro.webp' },
+  { name: 'ID', image: '' },
+  { name: 'Gamma Ensino', image: '/2gamma.webp' },
+  { name: 'Mira Transportes', image: '' },
 ];
 const reasons = [
   [
@@ -144,44 +171,51 @@ export default function FreitasPage() {
         <span>Veterano do BOPE</span>
         <span>Palestrante</span>
         <span>Autor de 2 livros</span>
-        <span>Desenvolvimento humano</span>
+        <span>Empresário</span>
       </div>
       <section id="trajetoria" className={`${styles.section} ${styles.light}`}>
         <div className={styles.split}>
           <div>
             <p className={styles.kicker}>01 / Uma história de escolhas</p>
             <h2>
-              Antes de inspirar outros,
+              Vencer a si mesmo,
               <br />
-              foi preciso
+              todos os dias,
               <br />
-              <em>vencer a si mesmo.</em>
+              <em>é um compromisso sem fim.</em>
             </h2>
           </div>
           <div className={styles.prose}>
             <p>
-              Carioca, Freitas decidiu aos 18 anos que ingressaria na Polícia
-              Militar do Rio de Janeiro. Aos 21, foi aprovado no primeiro
-              concurso. Aos 23, chegou ao BOPE.
+              Inspirado por um amigo, Freitas, um jovem carioca, na ocasião com
+              18 anos, decidiu ingressar na Polícia Militar do Rio de Janeiro.
+              Foco e meta renderam a ele aprovação no primeiro concurso, aos 21.
+              Em seguida, aos 23 anos, foi aprovado para o BOPE, elite da PM
+              sonhada por muitos jovens.
             </p>
             <p>
-              Depois de sete anos no batalhão, escolheu um novo caminho
-              profissional. Levou consigo as lições de liderança,
-              responsabilidade e superação vividas nas operações especiais.
+              Sete anos depois de ingressar no batalhão de elite, enfrentando
+              missões de vida e morte, muitas delas narradas em suas palestras,
+              Freitas decide abandonar a carreira militar para desbravar um novo
+              caminho profissional.
             </p>
             <p>
-              Hoje, compartilha essa trajetória em palestras, livros e
-              treinamentos, conectando as experiências do campo aos desafios das
-              pessoas e das empresas.
+              Vivenciou fracassos, frustrações e vitórias que lhe renderam não
+              só a carreira de treinador e empresário bem-sucedido, mas também
+              de autor e palestrante.
+            </p>
+            <p>
+              Abordando temas como a essência do combate, sua jornada é um sopro
+              de vida àqueles que buscam um exemplo real de coragem e superação.
             </p>
           </div>
         </div>
         <div className={styles.timeline}>
           {[
-            ['18', 'anos · a decisão'],
-            ['21', 'anos · ingresso na PM'],
-            ['23', 'anos · chegada ao BOPE'],
-            ['7', 'anos no batalhão'],
+            ['18', 'anos · decisão de ser caveira'],
+            ['23', 'anos · ingresso no BOPE'],
+            ['30', 'anos · falência e depressão'],
+            ['43', 'anos · empresário, palestrante e treinador'],
           ].map(([n, label]) => (
             <div key={n}>
               <strong>{n}</strong>
@@ -194,25 +228,41 @@ export default function FreitasPage() {
         <p className={styles.kicker}>02 / A palestra</p>
         <div className={styles.split}>
           <h2>
-            O que realmente importa:
+            A verdadeira
             <br />
             <em>
-              pessoas, valores
-              <br />e propósito.
+              liderança começa pela
+              <br />
+              compreensão de si mesmo.
             </em>
           </h2>
           <div className={styles.prose}>
             <p>
-              Uma experiência de inspiração, reflexão e conexão humana. Uma
-              palestra leve, verdadeira e emocionante, inspirada na jornada de
-              Freitas no BOPE e na transição para o mundo empresarial.
+              Minha passagem pelo curso do BOPE, um dos mais difíceis do mundo,
+              a tentativa de suicídio após deixar as fileiras do batalhão para
+              empreender e a volta por cima como empresário e treinador me dão
+              base para sustentar uma tese: a autoliderança e a liderança são
+              fundamentais para a construção de uma vida de sucesso.
             </p>
             <p>
-              Histórias sobre as pessoas que caminham ao nosso lado, as escolhas
-              que fazemos e a coragem de continuar diante dos desafios.
+              Foi enfrentando a depressão, reconhecendo minhas fraquezas e
+              reconstruindo minha identidade que compreendi que, antes de
+              liderar outras pessoas, precisava aprender a liderar a mim mesmo.
+            </p>
+            <p>
+              Quando essa compreensão acontece, liderar pessoas, desenvolver
+              talentos e transformar colaboradores em uma unidade torna-se uma
+              consequência natural da nossa própria evolução.
+            </p>
+            <p>
+              Afinal, a tropa é o espelho do guia. Seus colaboradores refletem
+              não apenas suas virtudes, mas também suas deficiências.
             </p>
           </div>
         </div>
+        <p className={`${styles.kicker} ${styles.pillarsLabel}`}>
+          Os 4 pilares
+        </p>
         <div className={styles.themes}>
           {themes.map(([title, copy], i) => (
             <article key={title}>
@@ -223,20 +273,32 @@ export default function FreitasPage() {
           ))}
         </div>
       </section>
-      <section className={styles.quoteSection}>
-        <img
-          src={asset('/images/freitas-speaking.jpg')}
-          alt="Freitas compartilhando sua experiência com o público"
-          loading="lazy"
-          width="2000"
-          height="3000"
-        />
-        <div>
-          <p className={styles.kicker}>Um compromisso diário</p>
-          <blockquote>
-            “Vencer a si mesmo, todos os dias, é um compromisso sem fim.”
-          </blockquote>
-          <p className={styles.quoteCredit}>Freitas</p>
+      <section
+        className={`${styles.section} ${styles.testimonials}`}
+        aria-labelledby="depoimentos-title"
+      >
+        <p className={styles.kicker}>Quem viveu, conta</p>
+        <h2 id="depoimentos-title">
+          Experiências reais.
+          <br />
+          <em>Transformações que ficam.</em>
+        </h2>
+        <p className={styles.testimonialIntro}>
+          Relatos sobre os treinamentos e as experiências do Instituto 2630.
+        </p>
+        <div className={styles.testimonialGrid}>
+          {testimonials.map(({ name, role, quote }) => (
+            <figure key={name}>
+              <span className={styles.quoteMark} aria-hidden="true">
+                “
+              </span>
+              <blockquote>{quote}</blockquote>
+              <figcaption>
+                <strong>{name}</strong>
+                <span>{role}</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
       <section className={`${styles.section} ${styles.light}`}>
@@ -279,6 +341,17 @@ export default function FreitasPage() {
         <div className={styles.books}>
           <article>
             <span className={styles.number}>Livro / 01</span>
+            <div
+              className={styles.bookCover}
+              role="img"
+              aria-label="Capa de Da faca à tesoura — imagem em breve"
+            >
+              <span>
+                Da faca
+                <br />à tesoura
+              </span>
+              <small>Capa em breve</small>
+            </div>
             <h3>Da faca à tesoura</h3>
             <p>
               Uma história real sobre escolhas, recomeços e a coragem necessária
@@ -290,6 +363,17 @@ export default function FreitasPage() {
           </article>
           <article>
             <span className={styles.number}>Livro / 02</span>
+            <div
+              className={styles.bookCover}
+              role="img"
+              aria-label="Capa de Os 7 atributos — imagem em breve"
+            >
+              <span>
+                Os 7<br />
+                atributos
+              </span>
+              <small>Capa em breve</small>
+            </div>
             <h3>Os 7 atributos</h3>
             <p>
               Um guia prático para enfrentar desafios, fortalecer a mentalidade
@@ -317,26 +401,28 @@ export default function FreitasPage() {
           ))}
         </div>
       </section>
-      <section className={styles.clients}>
+      <section id="empresas" className={styles.clients}>
         <p className={styles.kicker}>Empresas presentes nessa trajetória</p>
-        <div>
-          {[
-            'Blue3',
-            'Petrobras',
-            'Porto',
-            'Inter’ISP',
-            'MyBirds',
-            'Rede Autobem',
-            'Diferen/TI',
-            'Petromar',
-            'Nova Época Imóveis',
-            'Idex',
-            'Carraro',
-            'ID',
-            'Gamma Ensino',
-            'Mira Transportes',
-          ].map((name) => (
-            <span key={name}>{name}</span>
+        <h2>
+          Confiança construída.
+          <br />
+          <em>Dentro de grandes equipes.</em>
+        </h2>
+        <div className={styles.clientGrid}>
+          {clients.map(({ name, image }) => (
+            <div className={styles.clientCard} key={name}>
+              {image ? (
+                <img
+                  src={asset(image)}
+                  alt={name}
+                  loading="lazy"
+                  width="200"
+                  height="90"
+                />
+              ) : (
+                <span>{name}</span>
+              )}
+            </div>
           ))}
         </div>
       </section>

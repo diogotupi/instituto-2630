@@ -268,37 +268,65 @@
   color: #bfb7b7;
   margin: 0;
 }
-.quoteSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.testimonials {
   background: #221c1c;
 }
-.quoteSection > img {
-  width: 100%;
-  height: 650px;
-  object-fit: cover;
-  object-position: 50% 32%;
+.pillarsLabel {
+  margin-top: 58px;
+  margin-bottom: 0;
 }
-.quoteSection > div {
-  padding: 80px 12%;
-  align-self: center;
+.pillarsLabel + .themes {
+  margin-top: 26px;
 }
-.quoteSection blockquote {
+.testimonialIntro {
+  color: #bfb7b7;
+  max-width: 580px;
+  line-height: 1.8;
+  margin-top: 26px;
+}
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 46px;
+}
+.testimonialGrid figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 30px;
+  border-top: 2px solid #cc001e;
+  background: #171313;
+}
+.quoteMark {
   font:
-    700 clamp(38px, 4.5vw, 66px)/1.08 'rift',
+    90px/0.8 Georgia,
+    serif;
+  color: #e9002a;
+}
+.testimonialGrid blockquote {
+  margin: 14px 0 28px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.testimonialGrid figcaption {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid #ffffff25;
+}
+.testimonialGrid figcaption strong {
+  font:
+    700 26px/1.15 'rift',
     Arial,
     sans-serif;
   text-transform: uppercase;
-  margin: 0;
 }
-.quoteCredit {
-  font:
-    600 11px 'termina',
-    Arial,
-    sans-serif;
-  color: #e9002a;
-  margin-top: 30px;
-  letter-spacing: 0.15em;
+.testimonialGrid figcaption span {
+  color: #bfb7b7;
+  font-size: 12px;
+  line-height: 1.7;
 }
 .reasonIntro {
   position: sticky;
@@ -339,6 +367,32 @@
 .books h3 {
   font-size: 44px;
 }
+.bookCover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: min(100%, 220px);
+  aspect-ratio: 2 / 3;
+  margin: 28px auto 36px;
+  padding: 28px 22px;
+  border: 1px solid #ffffff40;
+  border-left: 7px solid #cc001e;
+  background: linear-gradient(145deg, #3c2727, #171313 70%);
+  box-shadow: 12px 14px 0 #0003;
+}
+.bookCover > span {
+  font:
+    700 38px/1.05 'rift',
+    Arial,
+    sans-serif;
+  text-transform: uppercase;
+}
+.bookCover small {
+  color: #bfb7b7;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .bookDetail {
   display: block;
   border-top: 1px solid #ffffff20;
@@ -367,22 +421,38 @@
   color: #756767;
 }
 .clients {
-  padding: 65px 7%;
+  padding: 95px max(7vw, calc((100vw - 1200px) / 2));
   background: #e7e0dd;
   color: #171313;
 }
-.clients > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px 38px;
-  align-items: center;
+.clientGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 46px;
 }
-.clients > div > span {
+.clientCard {
+  display: grid;
+  place-items: center;
+  min-height: 140px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #17131315;
+  border-bottom: 3px solid #cc001e;
+}
+.clientCard img {
+  width: 100%;
+  max-width: 180px;
+  height: 85px;
+  object-fit: contain;
+}
+.clientCard > span {
   font:
-    600 15px 'omnium-wide',
+    700 23px/1.25 'omnium-wide',
     Arial,
     sans-serif;
-  color: #5b5252;
+  text-align: center;
+  color: #171313;
 }
 .contact {
   text-align: center;
@@ -503,17 +573,8 @@
   .themes p {
     font-size: 14px;
   }
-  .quoteSection {
+  .testimonialGrid {
     grid-template-columns: 1fr;
-  }
-  .quoteSection > img {
-    height: 430px;
-  }
-  .quoteSection > div {
-    padding: 48px 7% 60px;
-  }
-  .quoteSection blockquote {
-    font-size: 44px;
   }
   .reasonIntro {
     position: static;
@@ -539,11 +600,19 @@
   .clients {
     padding: 50px 7%;
   }
-  .clients > div {
-    gap: 24px;
+  .clientGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
-  .clients > div > span {
-    font-size: 13px;
+  .clientCard {
+    min-height: 112px;
+    padding: 16px;
+  }
+  .clientCard img {
+    height: 65px;
+  }
+  .clientCard > span {
+    font-size: 17px;
   }
   .contactLinks {
     flex-direction: column;
