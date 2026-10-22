@@ -143,7 +143,6 @@ export default function Home() {
       <section id="home" className="hero" style={{ "--home-hero-image": `url('${assetPath('/images/home-cover-20261017.png')}')` } as React.CSSProperties}>
         <div className="hero-grid" /><div className="hero-lines" />
         <div className="hero-copy motion"><p className="eyebrow"><span /> Centro de excelência em desenvolvimento humano</p><h1 className="hero-title">Não importa o problema,<br /><em>liderar é a solução</em></h1><p className="hero-subtitle">Lidere-se</p><a href="#quem-somos" className="button-primary">Conheça o Instituto <ArrowDown size={17} /></a></div>
-        <div className="hero-stamp"><strong>2630</strong><span>MENTE<br />CORPO<br />PROPÓSITO</span></div>
         <a className="scroll-cue" href="#quem-somos">Scroll para explorar <ArrowDown size={14} /></a>
       </section>
 
@@ -182,7 +181,6 @@ export default function Home() {
       <section id="quem-somos" className="intro section-pad">
         <div className="section-index">01 <span>Quem somos</span></div>
         <div className="intro-content motion"><p className="eyebrow red">O Instituto 2630</p><h2>Método que<br />forma <em>líderes.</em></h2><p className="body-copy">Um centro de excelência em desenvolvimento humano e empresarial. Unimos a cultura, a capacidade de liderar sob pressão, a estratégia e a mentalidade das operações especiais ao desenvolvimento de pessoas e organizações.</p><a className="text-link" href="#fundadores">Conheça os fundadores <ArrowUpRight size={16} /></a></div>
-        <div className="intro-number">26<sup>30</sup></div>
       </section>
 
       <section id="fundadores" className="founders-stage">
