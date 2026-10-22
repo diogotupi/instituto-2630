@@ -12,6 +12,50 @@ const contact =
   'https://wa.me/5521981269626?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20para%20uma%20palestra%20do%20Freitas.';
 const asset = (path: string) =>
   `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
+const gallery = [
+  {
+    file: '01',
+    title: 'Planejamento em equipe',
+    alt: 'Participantes trabalham juntos sobre um mapa durante uma dinâmica de planejamento',
+    width: 1600,
+    height: 1200,
+  },
+  {
+    file: '02',
+    title: 'Conhecimento compartilhado',
+    alt: 'Turma reunida em auditório ao final de uma experiência do Instituto 2630',
+    width: 1600,
+    height: 1342,
+  },
+  {
+    file: '03',
+    title: 'Aprendizado em campo',
+    alt: 'Freitas conduz uma aula ao ar livre à noite, com participantes diante de um quadro',
+    width: 900,
+    height: 1600,
+  },
+  {
+    file: '04',
+    title: 'Liderança na prática',
+    alt: 'Freitas fala ao microfone para uma turma em sala durante um treinamento',
+    width: 1200,
+    height: 1600,
+  },
+  {
+    file: '05',
+    title: 'Espírito de equipe',
+    alt: 'Participantes e instrutores reunidos com os braços erguidos em frente ao banner do Instituto 2630',
+    width: 1086,
+    height: 1448,
+  },
+  {
+    file: '06',
+    title: 'Pessoas em movimento',
+    alt: 'Turma celebra em grupo ao final de uma atividade em sala',
+    width: 1200,
+    height: 1600,
+  },
+];
 const themes = [
   ['Lidere-se', 'Se der certo, nós vencemos; se der errado, é tudo comigo.'],
   ['Mova-se', 'Planeje bem, entre em ação e os resultados serão bons.'],
@@ -270,6 +314,46 @@ export default function FreitasPage() {
               <h3>{title}</h3>
               <p>{copy}</p>
             </article>
+          ))}
+        </div>
+      </section>
+      <section
+        id="galeria"
+        className={`${styles.section} ${styles.gallerySection}`}
+        aria-labelledby="galeria-title"
+      >
+        <p className={styles.kicker}>Encontros que fazem a diferença</p>
+        <h2 id="galeria-title">
+          Pessoas reais.
+          <br />
+          <em>Experiências em ação.</em>
+        </h2>
+        <p className={styles.galleryIntro}>
+          Registros de palestras, treinamentos e dinâmicas em equipe. Toque em
+          uma foto para vê-la completa.
+        </p>
+        <div className={styles.photoGallery}>
+          {gallery.map(({ file, title, alt, width, height }) => (
+            <figure key={file}>
+              <a
+                href={asset(`/images/freitas-galeria-${file}.png`)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Ver foto completa: ${title}`}
+              >
+                <img
+                  src={asset(`/images/freitas-galeria-${file}.png`)}
+                  alt={alt}
+                  loading="lazy"
+                  width={width}
+                  height={height}
+                />
+                <span className={styles.photoExpand} aria-hidden="true">
+                  <ArrowUpRight size={20} />
+                </span>
+              </a>
+              <figcaption>{title}</figcaption>
+            </figure>
           ))}
         </div>
       </section>
