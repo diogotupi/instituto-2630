@@ -1,18 +1,23 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export. */
 import { ArrowUpRight, MessageCircle } from 'lucide-react';
 import { nucoe } from '@/content/nucoe';
+import {
+  siteSettings,
+  cultureHours,
+  cultureDuration,
+} from '@/lib/siteSettings';
+const offer = siteSettings.cultura;
 import styles from './cultura.module.css';
 
 export const metadata = {
   title: 'Cultura de Elite — Formação empresarial ao vivo | Instituto 2630',
   description:
-    'Comece a construir a essência da cultura da sua empresa: Propósito, Valores e Princípios como base do NUCOE. Formação online e ao vivo pelo Zoom, em 2 dias e 8 horas.',
+    `Comece a construir a essência da cultura da sua empresa: Propósito, Valores e Princípios como base do NUCOE. ${offer.format}, ${cultureDuration}.`,
   alternates: { canonical: 'https://instituto2630.com.br/cultura-de-elite/' },
 };
 const asset = (path: string) =>
   `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
-const whatsapp =
-  'https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0';
+const whatsapp = offer.contactUrl;
 const primary = 'Quero aprender a construir a cultura da minha empresa';
 const symptoms = [
   'Falhas recorrentes na execução.',
@@ -98,7 +103,7 @@ export default function CulturaDeElitePage() {
           <p className={styles.lead}>{nucoe.hero.subheadline}</p>
           <Action />
           <p className={styles.format}>
-            Formação online e ao vivo · Zoom · 2 dias · 8 horas
+            {offer.format} · {cultureDuration}
           </p>
         </div>
         <div className={styles.heroImage}>
@@ -238,7 +243,7 @@ export default function CulturaDeElitePage() {
       <section className={`${styles.section} ${styles.light}`} id="plano">
         <p className={styles.kicker}>O que será construído</p>
         <h2>
-          Em 8 horas, você vai começar a estruturar
+          Em {cultureHours} horas, você vai começar a estruturar
           <br />
           <em>a essência da cultura da sua empresa.</em>
         </h2>
@@ -284,8 +289,7 @@ export default function CulturaDeElitePage() {
           ))}
         </div>
         <p className={styles.format}>
-          Dois encontros ao vivo pelo Zoom · Quatro horas por dia · Oito horas
-          no total
+          {offer.format} · {cultureDuration}
         </p>
       </section>
       <section className={`${styles.section} ${styles.light}`} id="entregavel">
@@ -368,15 +372,18 @@ export default function CulturaDeElitePage() {
           <div className={styles.offerCard}>
             <dl>
               {[
-                ['Formato', 'Online e ao vivo via Zoom'],
-                ['Duração', '2 dias · 4 horas por dia · 8 horas totais'],
+                ['Formato', offer.format],
+                ['Duração', cultureDuration],
                 [
                   'Entregável',
                   'Estrutura da essência: Propósito, Valores e Princípios',
                 ],
-                ['Próxima turma', 'Datas e horários a confirmar'],
-                ['Investimento e condições', 'A definir'],
-                ['Gravação', 'Política a definir'],
+                ['Próxima turma', offer.date],
+                ['Horários', offer.schedule],
+                ['Local ou plataforma', offer.location],
+                ['Investimento', offer.investment],
+                ['Pagamento', offer.payment],
+                ['Gravação', offer.recording],
                 ['Certificação', 'Não haverá certificado'],
               ].map(([label, value]) => (
                 <div key={label}>
@@ -385,7 +392,7 @@ export default function CulturaDeElitePage() {
                 </div>
               ))}
             </dl>
-            <Action href={whatsapp} />
+            <Action href={offer.checkoutUrl} />
             <p className={styles.offerNote}>
               Fale com o Léo para saber sobre a próxima turma, condições e
               inscrição.
@@ -410,8 +417,7 @@ export default function CulturaDeElitePage() {
           <details>
             <summary>Os encontros serão gravados?</summary>
             <p>
-              A política de gravação ainda será definida. Consulte as
-              informações da próxima turma antes da inscrição.
+              {offer.recording}. Consulte as informações da próxima turma antes da inscrição.
             </p>
           </details>
         </div>
@@ -428,7 +434,7 @@ export default function CulturaDeElitePage() {
           essência: Propósito, Valores e Princípios.
         </p>
         <Action
-          href={whatsapp}
+          href={offer.checkoutUrl}
           label="Quero construir a essência da cultura da minha empresa"
         />
       </section>

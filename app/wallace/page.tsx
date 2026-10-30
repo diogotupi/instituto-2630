@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export uses native images and document navigation. */
 import { ArrowUpRight, AtSign } from 'lucide-react';
 import styles from './wallace.module.css';
+import { siteSettings } from '@/lib/siteSettings';
 
 export const metadata = {
   title: 'Wallace — Página em preparação | Instituto 2630',
@@ -9,7 +10,7 @@ export const metadata = {
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://instituto2630.com.br/wallace/' },
 };
-const contact = 'https://www.instagram.com/wcaveira53/';
+const contact = siteSettings.wallace.checkoutUrl;
 const asset = (path: string) =>
   `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 const themes = [
@@ -412,8 +413,12 @@ export default function WallacePage() {
         </p>
         <ContactButton label="Conversar com Wallace no Instagram" />
         <div className={styles.contactLinks}>
-          <a href={contact} target="_blank" rel="noreferrer">
-            @wcaveira53 ↗
+          <a
+            href={siteSettings.wallace.instagramUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {siteSettings.wallace.instagramLabel} ↗
           </a>
         </div>
       </section>

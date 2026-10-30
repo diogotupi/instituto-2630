@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export uses native images and document navigation. */
 import { ArrowUpRight, MessageCircle } from 'lucide-react';
 import styles from './freitas.module.css';
+import { siteSettings } from '@/lib/siteSettings';
+const profile = siteSettings.freitas;
 
 export const metadata = {
   title: 'Freitas — Palestras e liderança | Instituto 2630',
@@ -8,8 +10,7 @@ export const metadata = {
     'Veterano do BOPE, palestrante e autor. Conheça a trajetória de Freitas e leve uma experiência de reflexão e desenvolvimento humano para sua empresa.',
   alternates: { canonical: 'https://instituto2630.com.br/freitas/' },
 };
-const contact =
-  'https://wa.me/5521981269626?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20para%20uma%20palestra%20do%20Freitas.';
+const contact = profile.checkoutUrl;
 const asset = (path: string) =>
   `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 const gallery = [
@@ -453,7 +454,9 @@ export default function FreitasPage() {
               loading="lazy"
             />
             <h3>Os 7 atributos</h3>
-            <p className={styles.bookSubtitle}>Para ser um Operações Especiais na Vida</p>
+            <p className={styles.bookSubtitle}>
+              Para ser um Operações Especiais na Vida
+            </p>
             <p>
               Um guia prático para enfrentar desafios, fortalecer a mentalidade
               e construir uma vida com mais clareza, disciplina e direção.
@@ -521,16 +524,10 @@ export default function FreitasPage() {
         </p>
         <ContactButton label="Solicitar proposta pelo WhatsApp" />
         <div className={styles.contactLinks}>
-          <a href="mailto:freitasvinteseis@gmail.com">
-            freitasvinteseis@gmail.com
-          </a>
-          <a href="tel:+5521981269626">(21) 98126-9626</a>
-          <a
-            href="https://www.instagram.com/26freitas/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            @26freitas ↗
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          <a href={`tel:${profile.phone}`}>{profile.phoneLabel}</a>
+          <a href={profile.instagramUrl} target="_blank" rel="noreferrer">
+            {profile.instagramLabel} ↗
           </a>
         </div>
       </section>

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "pages": {
+    "penaporta": {
+      "format": "Treinamento presencial",
+      "duration": "11h de workshop",
+      "date": "14 de novembro (sábado)",
+      "schedule": "Das 9h às 20h",
+      "location": "Unidade Estácio, Sulacap",
+      "investment": "12x de R$ 23 no cartão",
+      "payment": "Consulte as condições no checkout",
+      "checkoutUrl": "https://academia-de-lideranca.vercel.app/liderflix/oferta/pe-na-porta"
+    },
+    "ceol": {
+      "format": "Imersão presencial",
+      "duration": "aproximadamente 48 horas",
+      "date": "6, 7 e 8 de novembro",
+      "schedule": "Sexta, 20h, até domingo, 16h",
+      "location": "Local a confirmar",
+      "investment": "Consulte as condições de inscrição",
+      "payment": "Consulte as condições de inscrição",
+      "seats": "Apenas 12 alunos",
+      "checkoutUrl": "https://formulario2630.com.br/ceo-l",
+      "contactUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0"
+    },
+    "cultura": {
+      "format": "Online e ao vivo via Zoom",
+      "days": 2,
+      "hoursPerDay": 4,
+      "date": "Datas e horários a confirmar",
+      "schedule": "Horários a confirmar",
+      "location": "Zoom",
+      "investment": "A definir",
+      "payment": "A definir",
+      "recording": "Política a definir",
+      "checkoutUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0",
+      "contactUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0"
+    },
+    "freitas": {
+      "checkoutUrl": "https://wa.me/5521981269626?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20proposta%20para%20uma%20palestra%20do%20Freitas.",
+      "instagramUrl": "https://www.instagram.com/26freitas/",
+      "instagramLabel": "@26freitas",
+      "email": "freitasvinteseis@gmail.com",
+      "phone": "+5521981269626",
+      "phoneLabel": "(21) 98126-9626"
+    },
+    "wallace": {
+      "checkoutUrl": "https://www.instagram.com/wcaveira53/",
+      "instagramUrl": "https://www.instagram.com/wcaveira53/",
+      "instagramLabel": "@wcaveira53"
+    },
+    "home": {
+      "contactUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0",
+      "email": "contato@instituto2630.com.br"
+    }
+  }
+}

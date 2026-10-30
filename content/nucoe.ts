@@ -1,3 +1,4 @@
+import { siteSettings, cultureDuration } from '@/lib/siteSettings';
 export type Testimonial = {
   quote: string;
   name: string;
@@ -201,7 +202,7 @@ export const nucoe = {
     },
     {
       question: "Como funciona?",
-      answer: "Ao vivo via Zoom, em dois dias, com quatro horas de formação por dia.",
+      answer: `${siteSettings.cultura.format}. ${cultureDuration}.`,
     },
     {
       question: "O que será construído?",
