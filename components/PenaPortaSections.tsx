@@ -75,7 +75,6 @@ const testimonials = [
 
 export function PenaPortaSections() {
   const checkout = resolvePenaPortaCheckout(penaporta.checkoutUrl);
-  const whatsapp = penaporta.whatsappUrl;
 
   return (
     <>
@@ -94,7 +93,7 @@ export function PenaPortaSections() {
               <p className={styles.heroLede}>Um dia inteiro para transformar objetivos em planejamento, prioridades e ações executáveis — usando os 7 atributos das Operações Especiais e o Mapa Combat.</p>
             </Reveal>
             <Reveal delayMs={240}>
-              <div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.purchase} /></div>
+              <div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} purchaseLabel={penaporta.ctas.purchase} /></div>
               <div className={styles.heroMeta} aria-label="Informações principais">
                 <span>Evento presencial</span><span>11h de workshop</span><span>Método prático</span><span>Aplicação</span>
               </div>
@@ -194,7 +193,7 @@ export function PenaPortaSections() {
             </div>
             <div className={styles.mapCore}><small>Ferramenta de aplicação</small><strong>Mapa<br />Combat</strong><span>Planejamento → decisão → execução</span></div>
           </Reveal>
-          <div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.vacancy} /></div>
+          <div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} purchaseLabel={penaporta.ctas.vacancy} /></div>
         </div>
       </section>
 
@@ -302,7 +301,7 @@ export function PenaPortaSections() {
               <div><dt>Local</dt><dd>{penaporta.event.location}</dd></div>
               <div><dt>Investimento</dt><dd>{penaporta.event.investment}</dd></div>
             </dl>
-            <PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.duo} />
+            <PenaPortaActions checkoutUrl={checkout} purchaseLabel={penaporta.ctas.duo} />
             <p className="micro">Garanta seu ingresso e leve um convidado. Para dúvidas, fale diretamente com o Léo.</p>
           </Reveal>
         </div>
@@ -312,7 +311,7 @@ export function PenaPortaSections() {
 
       <section id="fechamento" className={`section section--dark ${styles.close}`}>
         <ChevronField density={11} />
-        <div className="section__inner"><Reveal className={styles.closeCopy}><p className="eyebrow">O próximo movimento é seu</p><h2 className="headline headline--wide">O resultado que você quer exige: clareza, planejamento, preparação e execução hoje.</h2><p className="lede">Pare de depender apenas de intenção, esforço e improviso. Reserve um dia para organizar sua direção, aprender o método e construir um plano que possa ser executado.</p><blockquote>“Planeje bem e os resultados serão bons.”</blockquote><div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} whatsappUrl={whatsapp} purchaseLabel={penaporta.ctas.vacancy} /></div></Reveal></div>
+        <div className="section__inner"><Reveal className={styles.closeCopy}><p className="eyebrow">O próximo movimento é seu</p><h2 className="headline headline--wide">O resultado que você quer exige: clareza, planejamento, preparação e execução hoje.</h2><p className="lede">Pare de depender apenas de intenção, esforço e improviso. Reserve um dia para organizar sua direção, aprender o método e construir um plano que possa ser executado.</p><blockquote>“Planeje bem e os resultados serão bons.”</blockquote><div className={styles.ctaRow}><PenaPortaActions checkoutUrl={checkout} purchaseLabel={penaporta.ctas.vacancy} /></div></Reveal></div>
       </section>
     </>
   );
