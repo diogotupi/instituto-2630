@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { assetPath } from '@/lib/assetPath';
 
 const products = [
+  { label: 'Cultura de Elite', href: '/cultura-de-elite' },
   { label: 'Pé Na Porta', href: '/penaporta' },
   { label: 'School of Skull', href: '/school-of-skull' },
   { label: 'OPESP', href: '/opesp' },
