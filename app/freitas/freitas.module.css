@@ -440,30 +440,21 @@
   font-size: 44px;
 }
 .bookCover {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: min(100%, 220px);
-  aspect-ratio: 2 / 3;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
   margin: 28px auto 36px;
-  padding: 28px 22px;
-  border: 1px solid #ffffff40;
-  border-left: 7px solid #cc001e;
-  background: linear-gradient(145deg, #3c2727, #171313 70%);
-  box-shadow: 12px 14px 0 #0003;
 }
-.bookCover > span {
+.books .bookSubtitle {
   font:
-    700 38px/1.05 'rift',
+    600 23px/1.2 'rift',
     Arial,
     sans-serif;
   text-transform: uppercase;
-}
-.bookCover small {
-  color: #bfb7b7;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: #f5f1f0;
+  margin: -3px 0 18px;
 }
 .bookDetail {
   display: block;

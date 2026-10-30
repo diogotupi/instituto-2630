@@ -425,17 +425,14 @@ export default function FreitasPage() {
         <div className={styles.books}>
           <article>
             <span className={styles.number}>Livro / 01</span>
-            <div
+            <img
               className={styles.bookCover}
-              role="img"
-              aria-label="Capa de Da faca à tesoura — imagem em breve"
-            >
-              <span>
-                Da faca
-                <br />à tesoura
-              </span>
-              <small>Capa em breve</small>
-            </div>
+              src={asset('/images/livro-da-faca-a-tesoura-mockup.png')}
+              alt="Mockup do livro Da Faca à Tesoura, de Freitas, com a capa em destaque em um cenário de estúdio"
+              width="1254"
+              height="1254"
+              loading="lazy"
+            />
             <h3>Da faca à tesoura</h3>
             <p>
               Uma história real sobre escolhas, recomeços e a coragem necessária
@@ -447,18 +444,16 @@ export default function FreitasPage() {
           </article>
           <article>
             <span className={styles.number}>Livro / 02</span>
-            <div
+            <img
               className={styles.bookCover}
-              role="img"
-              aria-label="Capa de Os 7 atributos — imagem em breve"
-            >
-              <span>
-                Os 7<br />
-                atributos
-              </span>
-              <small>Capa em breve</small>
-            </div>
+              src={asset('/images/livro-7-atributos-mockup.png')}
+              alt="Mockup do livro Os 7 Atributos para ser um Operações Especiais na Vida, autor Freitas e coautor Wallace"
+              width="1254"
+              height="1254"
+              loading="lazy"
+            />
             <h3>Os 7 atributos</h3>
+            <p className={styles.bookSubtitle}>Para ser um Operações Especiais na Vida</p>
             <p>
               Um guia prático para enfrentar desafios, fortalecer a mentalidade
               e construir uma vida com mais clareza, disciplina e direção.
