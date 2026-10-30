@@ -178,8 +178,7 @@ export default function CulturaDeElitePage() {
         <p className={styles.intro}>
           Quando a liderança não ocupa conscientemente o espaço cultural,
           crenças, valores e comportamentos individuais passam a preenchê-lo. A
-          empresa continua tendo cultura — apenas pode não ser a cultura que o
-          dono desejava construir.
+          empresa continua tendo cultura, mas ela não é definida por você.
         </p>
         <div className={styles.comparison}>
           <article>
