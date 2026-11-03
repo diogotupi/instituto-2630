@@ -138,6 +138,7 @@ export default function Home() {
               {products.map((product, i) => <a href={product.href} key={product.label}><small>0{i + 1}</small>{product.label}<ArrowUpRight size={14} /></a>)}
             </div>
           </div>
+          <a className="nav-cta nav-academy" href={siteSettings.home.academyUrl} target="_blank" rel="noreferrer">ACADEMIA DE LIDERANÇA <ArrowUpRight size={15} /></a>
           <a className="nav-cta" href="#contato">Fale conosco <ArrowUpRight size={15} /></a>
         </div>
       </nav>

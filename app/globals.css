@@ -19,7 +19,19 @@ button{font:inherit}
 .submenu a{display:flex;align-items:center;gap:12px;padding:13px 11px;font-size:11px}
 .submenu a:hover{background:#ffffff0c}.submenu small{color:var(--red)}.submenu svg{margin-left:auto}
 .nav-cta{display:flex!important;align-items:center;gap:10px;border:1px solid #ffffff3b;padding:13px 17px}
+.nav-links>.nav-academy{background:var(--red);border-color:var(--red);opacity:1}
 .menu-toggle{display:none;background:none;border:0;color:white}
+
+@media(max-width:1280px){
+ .nav .menu-toggle{display:block}
+ .nav-links{display:none;position:absolute;top:90px;left:0;right:0;padding:18px 6vw 28px;background:#171313;flex-direction:column;align-items:stretch;gap:4px}
+ .nav-links.is-open{display:flex}
+ .nav-links>a,.product-menu>button{padding:14px 0}
+ .nav-links>.nav-academy{padding-inline:16px;justify-content:space-between}
+ .product-menu>button{width:100%;justify-content:space-between}
+ .submenu{position:static;width:100%;display:none}
+ .submenu.show{display:block}
+}
 
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:150px 10vw 100px;background-image:linear-gradient(90deg,#171313fa 0%,#171313e6 42%,#17131342 78%),var(--home-hero-image);background-size:cover;background-position:center;isolation:isolate}
 .hero-grid{position:absolute;inset:0;opacity:.12;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(90deg,transparent,#000 50%,transparent)}

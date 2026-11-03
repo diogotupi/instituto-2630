@@ -121,6 +121,26 @@
   text-transform: uppercase;
 }
 
+.purchase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: fit-content;
+  margin-bottom: 28px;
+  padding: 18px 24px;
+  background: var(--landing-red);
+  color: var(--landing-cream);
+  font: 700 11px "termina", Arial, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.purchase:focus-visible {
+  outline: 2px solid var(--landing-cream);
+  outline-offset: 4px;
+}
+
 .back span {
   font-size: 18px;
 }

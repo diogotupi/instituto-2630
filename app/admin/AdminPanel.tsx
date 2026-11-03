@@ -313,8 +313,8 @@ export function AdminPanel() {
               ))}
             </nav>
             <p className={styles.help}>
-              Páginas provisórias sem oferta ainda não precisam de configuração
-              comercial. CEO-L e Cultura de Elite também atualizam seus
+              As páginas provisórias permitem alterar o link de inscrição.
+              CEO-L e Cultura de Elite também atualizam seus
               endereços alternativos.
             </p>
           </aside>

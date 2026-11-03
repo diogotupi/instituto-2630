@@ -10,6 +10,9 @@ export const editablePages = [
   { id: 'penaporta', name: 'Pé na Porta', path: '/penaporta/' },
   { id: 'ceol', name: 'CEO-L', path: '/ceol/' },
   { id: 'cultura', name: 'Cultura de Elite', path: '/cultura-de-elite/' },
+  { id: 'lidertrainer', name: 'Líder Trainer', path: '/lider-trainer/' },
+  { id: 'opesp', name: 'OPESP', path: '/opesp/' },
+  { id: 'school', name: 'School of Skull', path: '/school-of-skull/' },
   { id: 'freitas', name: 'Freitas', path: '/freitas/' },
   { id: 'wallace', name: 'Wallace', path: '/wallace/' },
 ] as const;
@@ -28,6 +31,7 @@ export const fieldLabels: Record<string, string> = {
   seats: 'Quantidade de vagas',
   recording: 'Política de gravação',
   checkoutUrl: 'Destino dos botões de inscrição / proposta',
+  academyUrl: 'Link da Academia de Liderança no cabeçalho',
   contactUrl: 'Destino do botão de contato',
   instagramUrl: 'Link do Instagram',
   instagramLabel: 'Instagram exibido',

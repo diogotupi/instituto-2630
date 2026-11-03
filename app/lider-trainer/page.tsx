@@ -1,7 +1,8 @@
 import { LandingPlaceholder } from "@/components/LandingPlaceholder";
+import { siteSettings } from "@/lib/siteSettings";
 
 export const metadata = { title: "Lider Trainer | Instituto 2630" };
 
 export default function LiderTrainerPage() {
-  return <LandingPlaceholder eyebrow="Lider Trainer" title="Lider Trainer" category="Landing sazonal" />;
+  return <LandingPlaceholder eyebrow="Lider Trainer" title="Lider Trainer" category="Landing sazonal" checkoutUrl={siteSettings.lidertrainer.checkoutUrl} />;
 }

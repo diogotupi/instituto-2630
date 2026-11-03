@@ -9,7 +9,7 @@
       "location": "Unidade Estácio, Sulacap",
       "investment": "12x de R$ 23 no cartão",
       "payment": "Consulte as condições no checkout",
-      "checkoutUrl": "https://academia-de-lideranca.vercel.app/liderflix/oferta/pe-na-porta"
+      "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/pe-na-porta"
     },
     "ceol": {
       "format": "Imersão presencial",
@@ -20,7 +20,7 @@
       "investment": "Consulte as condições de inscrição",
       "payment": "Consulte as condições de inscrição",
       "seats": "Apenas 12 alunos",
-      "checkoutUrl": "https://formulario2630.com.br/ceo-l",
+      "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/ceo-l",
       "contactUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0"
     },
     "cultura": {
@@ -33,7 +33,7 @@
       "investment": "A definir",
       "payment": "A definir",
       "recording": "Política a definir",
-      "checkoutUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0",
+      "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/cultura-de-elite",
       "contactUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0"
     },
     "freitas": {
@@ -49,7 +49,17 @@
       "instagramUrl": "https://www.instagram.com/wcaveira53/",
       "instagramLabel": "@wcaveira53"
     },
+    "lidertrainer": {
+      "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/lider-trainer"
+    },
+    "opesp": {
+      "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/opesp"
+    },
+    "school": {
+      "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/school-of-school"
+    },
     "home": {
+      "academyUrl": "https://app.instituto2630.com.br/academiadelideranca",
       "contactUrl": "https://api.whatsapp.com/message/ZTFAHNLLCQVJF1?autoload=1&app_absent=0",
       "email": "contato@instituto2630.com.br"
     }
