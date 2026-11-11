@@ -83,7 +83,7 @@ export const penaporta = {
     },
     {
       question: 'Posso levar um convidado?',
-      answer: 'Sim. Garanta seu ingresso e leve um convidado.',
+      answer: `Sim. ${offer.included}`,
     },
     {
       question: 'É presencial?',
@@ -110,7 +110,7 @@ export const penaporta = {
     },
     {
       question: 'Como funciona a inscrição?',
-      answer: `Clique no botão de inscrição para acessar o checkout oficial. Investimento: ${offer.investment}. Pagamento: ${offer.payment}. Garanta seu ingresso e leve um convidado.`,
+      answer: `Clique no botão de inscrição para acessar o checkout oficial. Investimento: ${offer.investment}. Pagamento: ${offer.payment}. ${offer.included}`,
     },
     {
       question: 'O evento é militar?',

@@ -289,7 +289,7 @@ export function PenaPortaSections() {
           <Reveal>
             <p className="eyebrow">Próxima edição</p>
             <h2 className="headline">Um dia para construir direção.</h2>
-            <p className="lede">{penaporta.event.date}. {penaporta.event.schedule}. {penaporta.event.location}. Garanta seu ingresso e leve um convidado.</p>
+            <p className="lede">{penaporta.event.date}. {penaporta.event.schedule}. {penaporta.event.location}. {penaporta.event.included}</p>
           </Reveal>
           <Reveal delayMs={110} className={styles.offerCard}>
             <strong className={styles.offerTitle}>Pé na Porta</strong>
@@ -300,9 +300,10 @@ export function PenaPortaSections() {
               <div><dt>Horário</dt><dd>{penaporta.event.schedule}</dd></div>
               <div><dt>Local</dt><dd>{penaporta.event.location}</dd></div>
               <div><dt>Investimento</dt><dd>{penaporta.event.investment}</dd></div><div><dt>Pagamento</dt><dd>{penaporta.event.payment}</dd></div>
+              <div><dt>Incluído no ingresso</dt><dd>{penaporta.event.included}</dd></div>
             </dl>
             <PenaPortaActions checkoutUrl={checkout} purchaseLabel={penaporta.ctas.duo} />
-            <p className="micro">Garanta seu ingresso e leve um convidado. Para dúvidas, fale diretamente com o Léo.</p>
+            <p className="micro">Para dúvidas, fale diretamente com o Léo.</p>
           </Reveal>
         </div>
       </section>

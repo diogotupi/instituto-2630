@@ -27,6 +27,7 @@ export const fieldLabels: Record<string, string> = {
   schedule: 'Horários',
   location: 'Local ou plataforma',
   investment: 'Preço ou investimento',
+  included: 'O que está incluído no ingresso',
   payment: 'Formas e condições de pagamento',
   seats: 'Quantidade de vagas',
   recording: 'Política de gravação',

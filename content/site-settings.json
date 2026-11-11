@@ -4,10 +4,11 @@
     "penaporta": {
       "format": "Treinamento presencial",
       "duration": "11h de workshop",
-      "date": "14 de novembro (sábado)",
+      "date": "9 de janeiro",
       "schedule": "Das 9h às 20h",
-      "location": "Unidade Estácio, Sulacap",
-      "investment": "12x de R$ 23 no cartão",
+      "location": "Unidade Estácio de Sulacap",
+      "investment": "R$ 197,00",
+      "included": "Um convite para levar um convidado e 1 ano de acesso à plataforma.",
       "payment": "Consulte as condições no checkout",
       "checkoutUrl": "https://app.instituto2630.com.br/academiadelideranca/oferta/pe-na-porta"
     },
