@@ -515,7 +515,7 @@
     padding-bottom: 115px;
   }
   .whatsapp {
-    bottom: 22px;
+    bottom: calc(5.9rem + env(safe-area-inset-bottom));
     right: 18px;
   }
 }

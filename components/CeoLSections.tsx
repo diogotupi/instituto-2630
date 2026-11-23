@@ -83,6 +83,6 @@ export function CeoLSections() {
     <section className={`section section--light ${styles.offer}`} id="oferta"><div className="section__inner"><Reveal><p className="eyebrow red">Experiência real</p><h2 className="headline">Antes de liderar melhor os outros, compreenda quem está liderando.</h2><div className={styles.eventDetails}><p><span>Próxima turma</span>{ceol.event.date}</p><p><span>Horário</span>{ceol.event.schedule}</p><p><span>Turma</span>{ceol.event.seats}</p><p><span>Local</span>{ceol.event.location}</p><p><span>Duração</span>{ceol.event.duration}</p><p><span>Investimento</span>{ceol.event.investment}</p><p><span>Pagamento</span>{ceol.event.payment}</p></div><p className="lede">O investimento inclui hospedagem, equipamentos, uniformes e alimentação durante todo o período do curso.</p><CeoLActionButtons /></Reveal></div></section>
     <section className="section section--dark" id="contato"><div className="section__inner"><Reveal><p className="eyebrow">CEO-L</p><h2 className="headline">Não importa o problema, liderar é a solução.</h2><p className="lede">Lidere-se.</p><CeoLActionButtons dark /></Reveal></div></section>
     <StickyCta checkoutUrl={ceol.checkoutUrl} label="Entrar para lista de espera" />
-    <div className={styles.mobileWhatsApp}><FloatingWhatsApp href={ceol.whatsappUrl} /></div>
+    <FloatingWhatsApp href={ceol.whatsappUrl} />
   </main>;
 }

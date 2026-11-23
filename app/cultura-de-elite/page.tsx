@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export. */
-import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { StickyCta } from "@/components/StickyCta";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { ArrowUpRight } from 'lucide-react';
 import { nucoe } from '@/content/nucoe';
 import {
   siteSettings,
@@ -437,6 +439,7 @@ export default function CulturaDeElitePage() {
           label="Quero construir a essência da cultura da minha empresa"
         />
       </section>
+      <StickyCta checkoutUrl={offer.checkoutUrl} label="Comprar agora" />
       <footer className={styles.footer}>
         <a href="/">← Instituto 2630</a>
         <span>Cultura de Elite · Formação empresarial online e ao vivo.</span>
@@ -448,7 +451,7 @@ export default function CulturaDeElitePage() {
         rel="noreferrer"
         aria-label="Falar com o Léo sobre o Cultura de Elite pelo WhatsApp"
       >
-        <MessageCircle size={25} aria-hidden="true" />
+        <WhatsAppIcon />
       </a>
     </main>
   );

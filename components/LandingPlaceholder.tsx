@@ -1,3 +1,6 @@
+import { StickyCta } from "@/components/StickyCta";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { siteSettings } from "@/lib/siteSettings";
 import Link from "next/link";
 import styles from "./LandingPlaceholder.module.css";
 
@@ -25,6 +28,8 @@ export function LandingPlaceholder({ eyebrow, title, category, checkoutUrl }: La
         <Link className={styles.back} href={homeHref}>Voltar ao Instituto <span>↗</span></Link>
       </div>
       <div className={styles.code} aria-hidden="true">26 / 30</div>
+      {checkoutUrl && <StickyCta checkoutUrl={checkoutUrl} label="Comprar agora" />}
+      <FloatingWhatsApp href={siteSettings.home.contactUrl} />
     </main>
   );
 }

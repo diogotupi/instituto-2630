@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "./StickyCta.module.css";
 import { CtaButton } from "@/components/CtaButton";
 import { resolveCheckoutHref } from "@/content/nucoe";
 
@@ -16,10 +17,9 @@ export function StickyCta({ label, checkoutUrl }: Props) {
     const onScroll = () => {
       const hero = document.getElementById("hero");
       const offer = document.getElementById("oferta");
-      if (!hero) return;
-      const pastHero = window.scrollY > hero.offsetHeight * 0.65;
-      const offerTop = offer?.getBoundingClientRect().top ?? 9999;
-      const nearOffer = offerTop < window.innerHeight * 0.85;
+      const pastHero = window.scrollY > (hero?.offsetHeight ?? window.innerHeight) * 0.65;
+      const bounds = offer?.getBoundingClientRect();
+      const nearOffer = bounds && bounds.top < window.innerHeight * 0.85 && bounds.bottom > 0;
       setVisible(pastHero && !nearOffer);
     };
     onScroll();
@@ -27,8 +27,10 @@ export function StickyCta({ label, checkoutUrl }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  if (!visible) return null;
+
   return (
-    <div className={`sticky-cta ${visible ? "is-visible" : ""}`}>
+    <div className={styles.bar}>
       <CtaButton href={resolveCheckoutHref(checkoutUrl)}>{label}</CtaButton>
     </div>
   );

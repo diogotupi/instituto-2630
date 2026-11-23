@@ -1,3 +1,5 @@
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { siteSettings } from "@/lib/siteSettings";
 import { CursorGlow } from "@/components/CursorGlow";
 import { MotionShell } from "@/components/MotionShell";
 import { PenaPortaSections } from "@/components/PenaPortaSections";
@@ -21,6 +23,7 @@ export default function PenaPortaPage() {
         <SiteHeader checkoutUrl={penaporta.checkoutUrl} ctaLabel={penaporta.ctas.purchase} />
         <main><PenaPortaSections /></main>
         <StickyCta checkoutUrl={penaporta.checkoutUrl} label={penaporta.ctas.purchase} />
+      <FloatingWhatsApp href={siteSettings.home.contactUrl} />
       </MotionShell>
     </div>
   );

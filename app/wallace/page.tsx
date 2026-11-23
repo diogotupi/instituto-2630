@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export uses native images and document navigation. */
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { ArrowUpRight, AtSign } from 'lucide-react';
 import styles from './wallace.module.css';
 import { siteSettings } from '@/lib/siteSettings';
@@ -435,6 +436,7 @@ export default function WallacePage() {
       >
         <AtSign size={25} aria-hidden />
       </a>
+      <FloatingWhatsApp href={siteSettings.home.contactUrl} />
     </main>
   );
 }

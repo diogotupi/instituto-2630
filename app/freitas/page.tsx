@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element, @next/next/no-html-link-for-pages -- Static GitHub Pages export uses native images and document navigation. */
-import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { ArrowUpRight } from 'lucide-react';
 import styles from './freitas.module.css';
 import { siteSettings } from '@/lib/siteSettings';
 const profile = siteSettings.freitas;
@@ -542,7 +543,7 @@ export default function FreitasPage() {
         rel="noreferrer"
         aria-label="Conversar sobre a palestra de Freitas no WhatsApp"
       >
-        <MessageCircle size={25} aria-hidden />
+        <WhatsAppIcon />
       </a>
     </main>
   );
